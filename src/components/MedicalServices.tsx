@@ -29,70 +29,62 @@ export function MedicalServices() {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-8 items-start">
-          {/* Left Side - Main Image with Title */}
+    <section className="py-12 bg-[#ABB1BD]">
+      <div className="container mx-auto px-4  bg-[#ABB1BD]">
+        <div className="grid lg:grid-cols-2 gap-6 items-start bg-[#ABB1BD]">
+          {/* Left Side - Main Image with Title and Stats */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-lg overflow-hidden shadow-md">
               <img
                 src="https://images.unsplash.com/photo-1758691463110-697a814b2033?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVhbSUyMGNvbnN1bHRhdGlvbnxlbnwxfHx8fDE3NjEwMjYyMjF8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
                 alt="Медицинская команда"
-                className="w-full h-[600px] object-cover"
+                className="w-full h-[400px] object-cover"
               />
               
-              {/* Overlay with title */}
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/50 to-transparent p-8">
-                <h2 className="text-white mb-4 leading-tight">
-                  Медицинские услуги<br />
-                  мирового уровня для вас<br />
-                  и ваших близких
+              {/* Overlay with title and stats */}
+              <div className="absolute bottom-0 left-0 right-0 bg-[#2D1B69]/80 p-4">
+                <h2 className="text-white text-lg font-semibold mb-2 leading-tight">
+                  Высококвалифицированные услуги,<br />которые можно доверить
                 </h2>
-                
-                {/* ECG line */}
-                <svg className="w-full h-16 mt-4" viewBox="0 0 400 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path 
-                    d="M0 30 L80 30 L90 10 L100 50 L110 30 L400 30" 
-                    stroke="#EF4444" 
-                    strokeWidth="3" 
-                    fill="none"
-                    className="animate-pulse"
-                  />
-                </svg>
+                <ul className="text-white text-xs space-y-1">
+                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 20+ лет опыта</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 50+ квалифицированных врачей</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 10+ наград</li>
+                </ul>
               </div>
             </div>
           </div>
 
           {/* Right Side - Service Cards Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {services.map((service, index) => {
               const Icon = service.icon;
               return (
                 <div 
                   key={index} 
-                  className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all overflow-hidden group"
+                  className="bg-white rounded-lg shadow-sm hover:shadow-md transition-all overflow-hidden"
                 >
                   {/* Image */}
-                  <div className="relative h-40 overflow-hidden">
+                  <div className="relative h-32 overflow-hidden">
                     <img
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      className="w-full h-full object-cover"
                     />
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
+                  <div className="p-4">
                     {/* Icon */}
-                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                      <Icon className="w-6 h-6 text-blue-600" />
+                    <div className="w-10 h-10 bg-[#E6F0FA] rounded-lg flex items-center justify-center mb-3">
+                      <Icon className="w-5 h-5 text-[#2D1B69]" />
                     </div>
                     
                     {/* Title */}
-                    <h3 className="text-[#2D1B69] mb-3">{service.title}</h3>
+                    <h3 className="text-[#2D1B69] text-sm font-medium mb-2">{service.title}</h3>
                     
                     {/* Description */}
-                    <p className="text-[#718096] text-sm leading-relaxed">
+                    <p className="text-[#718096] text-xs leading-relaxed">
                       {service.description}
                     </p>
                   </div>
