@@ -1,3 +1,4 @@
+
 import { Button } from './ui/button';
 import { ArrowRight, Search } from 'lucide-react';
 import { Input } from './ui/input';
@@ -5,7 +6,6 @@ import { useTranslation } from 'react-i18next';
 
 export function Hero() {
   const { t } = useTranslation();
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -22,14 +22,13 @@ export function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
-          <div>
-            <h1 className="text-[#2D1B69] mb-6 leading-tight">
+          <div className="text-center lg:text-left">
+            <h1 className="text-[#2D1B69] text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               {t('hero.title')}
             </h1>
             
-            <p className="text-[#718096] text-lg mb-8 max-w-xl leading-relaxed">
+            <p className="text-[#718096] text-lg mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
               {t('hero.subtitle')}
-
             </p>
             
             <div className="flex flex-row gap-2 mb-8 justify-center lg:justify-start">
@@ -38,17 +37,12 @@ export function Hero() {
                 className="bg-[#2D1B69] hover:bg-[#3F2A7D] text-white px-4 py-1 rounded-full font-semibold shadow-md flex items-center text-sm"
               >
                 {t('hero.clinicsButton')}
-                <ArrowRight className="w-5 h-5 ml-2" />
+                <ArrowRight className="w-4 h-4 ml-1" />
               </Button>
-            </div>
-
-            {/* Search Box */}
-            <div className="bg-white rounded-2xl p-6 shadow-xl max-w-md">
-              <h3 className="text-[#2D1B69] mb-4">{t('hero.searchTitle')}</h3>
-              <div className="relative">
+              <div className="bg-white rounded-full p-1 shadow-md flex items-center">
                 <Input 
                   placeholder={t('hero.searchPlaceholder')}
-                  className="pr-12 h-12 rounded-lg"
+                  className="border-none focus:ring-0 h-8 rounded-full text-xs px-2"
                 />
                 <button className="ml-1 bg-[#2D1B69] hover:bg-[#3F2A7D] rounded-full w-8 h-8 flex items-center justify-center transition-colors">
                   <Search className="w-4 h-4 text-white" />
@@ -80,9 +74,9 @@ export function Hero() {
           {/* Right Content - Team Image */}
           <div className="hidden lg:block">
             <img
-              src="https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVhbSUyMGRvY3RvcnMlMjBob3NwaXRhbCUyMGdyb3VwfGVufDF8fHx8MTc2MTAyNjAzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt={t('hero.title')}
-              className="relative z-10 w-full h-auto object-contain max-h-[500px]"
+              src="https://billingfoxtech.com/wp-content/uploads/2024/08/BillingFox-Technologies.png"
+              alt="Команда профессиональных врачей"
+              className="w-full h-auto object-contain"
             />
           </div>
         </div>
