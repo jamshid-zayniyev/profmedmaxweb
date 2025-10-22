@@ -31,7 +31,10 @@
     "orthopedics": "Ортопедия",
     "ophthalmology": "Офтальмология",
     "pediatrics": "Педиатрия",
-    "therapy": "Терапия"
+    "therapy": "Терапия",
+    "Urology": "Урология",
+    "Dentistry": "Стоматология",
+    "Pulmonology": "Пульмонология"
   },
   "services": {
     "mainTitle": "Медицинские услуги мирового уровня для вас и ваших близких",

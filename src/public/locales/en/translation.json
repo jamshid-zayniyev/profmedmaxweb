@@ -31,7 +31,10 @@
     "orthopedics": "Orthopedics",
     "ophthalmology": "Ophthalmology",
     "pediatrics": "Pediatrics",
-    "therapy": "Therapy"
+    "therapy": "Therapy",
+    "Urology": "Urology",
+    "Dentistry": "Dentistry",
+    "Pulmonology": "Pulmonology"
   },
   "services": {
     "mainTitle": "World-class medical services for you and your loved ones",

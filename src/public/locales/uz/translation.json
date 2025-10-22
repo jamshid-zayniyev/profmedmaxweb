@@ -31,7 +31,10 @@
     "orthopedics": "Ortopediya",
     "ophthalmology": "Oftalmologiya",
     "pediatrics": "Pediatriya",
-    "therapy": "Terapiya"
+    "therapy": "Terapiya",
+    "Urology": "Urologiya",
+    "Dentistry": "Stomatologiya",
+    "Pulmonology": "Pulmonologiya"
   },
   "services": {
     "mainTitle": "Siz va yaqinlaringiz uchun dunyo standartidagi tibbiy xizmatlar",

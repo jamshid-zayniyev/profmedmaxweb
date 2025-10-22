@@ -31,7 +31,11 @@
     "orthopedics": "طب العظام",
     "ophthalmology": "طب العيون",
     "pediatrics": "طب الأطفال",
-    "therapy": "العلاج"
+    "therapy": "العلاج",
+    "Urology": "طب المسالك البولية",
+    "Dentistry": "طب الأسنان",
+    "Pulmonology": "علم الرئة"
+
   },
   "services": {
     "mainTitle": "خدمات طبية عالمية المستوى لك ولأحبائك",

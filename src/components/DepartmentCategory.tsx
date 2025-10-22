@@ -1,5 +1,11 @@
 import { Heart, Brain, Bone, Eye, Baby, Stethoscope } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import cardiology from '../assets/images/cardiology.png';
+import neurology from '../assets/images/neurology.png';
+import ortopedy from '../assets/images/ortopedy.png';
+import pulmonology from '../assets/images/pulmonology.png';
+import stomotology from '../assets/images/stomotology.png';
+import urology from '../assets/images/urology.png';
 
 export function DepartmentCategory() {
   const { t } = useTranslation();
@@ -7,32 +13,32 @@ export function DepartmentCategory() {
   const departments = [
     {
       name: t('departments.cardiology'),
-      icon: Heart,
+      icon: cardiology, 
       color: 'from-red-500 to-pink-400'
     },
     {
       name: t('departments.neurology'),
-      icon: Brain,
+      icon: neurology,
       color: 'from-purple-500 to-indigo-400'
     },
     {
       name: t('departments.orthopedics'),
-      icon: Bone,
+      icon: ortopedy,
       color: 'from-blue-500 to-cyan-400'
     },
     {
-      name: t('departments.ophthalmology'),
-      icon: Eye,
+      name: t('departments.Urology'),
+      icon: urology,
       color: 'from-green-500 to-emerald-400'
     },
     {
-      name: t('departments.pediatrics'),
-      icon: Baby,
+      name: t('departments.Dentistry'),
+      icon: stomotology,
       color: 'from-yellow-500 to-orange-400'
     },
     {
-      name: t('departments.therapy'),
-      icon: Stethoscope,
+      name: t('departments.Pulmonology'),
+      icon: pulmonology,
       color: 'from-teal-500 to-cyan-400'
     }
   ];
@@ -48,22 +54,23 @@ export function DepartmentCategory() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-          {departments.map((dept, index) => {
-            const Icon = dept.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col items-center border border-gray-200"
-              >
-                <div className={`w-12 h-12 bg-gradient-to-br ${dept.color} rounded-full flex items-center justify-center mb-2`}>
-                  <Icon className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-xs font-medium text-[#2D3748] text-center">
-                  {dept.name}
-                </span>
+          {departments.map((dept, index) => (
+            <div
+              key={index}
+              className="bg-white rounded-lg p-4 shadow-sm hover:shadow-md transition-all cursor-pointer flex flex-col items-center border border-gray-200"
+            >
+              <div className={`w-50 h-50 bg-gradient-to-br rounded-full flex items-center justify-center mb-2`}>
+                {typeof dept.icon === "string" ? (
+                  <img src={dept.icon} alt={dept.name} className="w-20 h-20 object-contain" />
+                ) : (
+                  <dept.icon className="!w-50 h-50 text-white" />
+                )}
               </div>
-            );
-          })}
+              <span className="text-xs font-medium text-[#2D3748] text-center">
+                {dept.name}
+              </span>
+            </div>
+          ))}
         </div>
       </div>
     </section>

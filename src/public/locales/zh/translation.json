@@ -31,7 +31,10 @@
     "orthopedics": "骨科",
     "ophthalmology": "眼科",
     "pediatrics": "儿科",
-    "therapy": "内科"
+    "therapy": "内科",
+    "Urology": "泌尿科",
+    "Dentistry": "牙科",
+    "Pulmonology": "肺病学"
   },
   "services": {
     "mainTitle": "为您和您的亲人提供世界一流的医疗服务",
