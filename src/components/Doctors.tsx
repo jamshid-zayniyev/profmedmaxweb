@@ -1,84 +1,87 @@
 import { Card } from './ui/card';
 import { Star, Clock } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Doctors() {
+  const { t } = useTranslation();
+
   const doctors = [
     {
-      name: 'Доктор Елена Иванова',
-      specialty: 'Главный кардиолог',
-      experience: '15 лет опыта',
+      name: t('language') === 'ru' ? 'Доктор Елена Иванова' : 
+            t('language') === 'uz' ? 'Doktor Elena Ivanova' :
+            t('language') === 'ar' ? 'الدكتورة إيلينا إيفانوفا' :
+            t('language') === 'zh' ? '伊莲娜·伊万诺娃医生' :
+            'Dr. Elena Ivanova',
+      specialty: t('doctors.specialties.cardiologist'),
+      experience: `15 ${t('doctors.experience')}`,
       image: 'https://images.unsplash.com/photo-1719610894782-7b376085e200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjA5Mzk1MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      description: 'Специалист по сердечно-сосудистым заболеваниям, кандидат медицинских наук',
-      achievements: [
-        '500+ операций',
-        'Награда "Лучший кардиолог 2024"',
-        'Международная сертификация'
-      ],
+      description: t('doctors.descriptions.cardiologist'),
+      achievements: t('doctors.achievements.cardiologist', { returnObjects: true }),
       color: 'from-orange-500 to-orange-600'
     },
     {
-      name: 'Доктор Александр Петров',
-      specialty: 'Хирург-ортопед',
-      experience: '18 лет опыта',
+      name: t('language') === 'ru' ? 'Доктор Александр Петров' : 
+            t('language') === 'uz' ? 'Doktor Aleksandr Petrov' :
+            t('language') === 'ar' ? 'الدكتور ألكسندر بيتروف' :
+            t('language') === 'zh' ? '亚历山大·彼得罗夫医生' :
+            'Dr. Alexander Petrov',
+      specialty: t('doctors.specialties.orthopedicSurgeon'),
+      experience: `18 ${t('doctors.experience')}`,
       image: 'https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYwOTY5ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      description: 'Эксперт по эндопротезированию суставов и спортивной медицине',
-      achievements: [
-        '1000+ операций',
-        'Профессор',
-        'Стаж в ведущих клиниках Европы'
-      ],
+      description: t('doctors.descriptions.orthopedicSurgeon'),
+      achievements: t('doctors.achievements.orthopedicSurgeon', { returnObjects: true }),
       color: 'from-orange-500 to-orange-600'
     },
     {
-      name: 'Доктор Мария Смирнова',
-      specialty: 'Педиатр высшей категории',
-      experience: '12 лет опыта',
+      name: t('language') === 'ru' ? 'Доктор Мария Смирнова' : 
+            t('language') === 'uz' ? 'Doktor Mariya Smirnova' :
+            t('language') === 'ar' ? 'الدكتورة ماريا سميرنوفا' :
+            t('language') === 'zh' ? '玛丽亚·斯米尔诺娃医生' :
+            'Dr. Maria Smirnova',
+      specialty: t('doctors.specialties.pediatrician'),
+      experience: `12 ${t('doctors.experience')}`,
       image: 'https://images.unsplash.com/photo-1567745566980-4378a3db17fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZWRpYXRyaWNpYW4lMjBkb2N0b3J8ZW58MXx8fHwxNzYwOTIwODc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      description: 'Специалист по детским заболеваниям и иммунологии',
-      achievements: [
-        '5000+ детей',
-        'Сертификат по вакцинации',
-        'Автор научных статей'
-      ],
+      description: t('doctors.descriptions.pediatrician'),
+      achievements: t('doctors.achievements.pediatrician', { returnObjects: true }),
       color: 'from-yellow-500 to-yellow-600'
     },
     {
-      name: 'Доктор Дмитрий Козлов',
-      specialty: 'Невролог',
-      experience: '20 лет опыта',
+      name: t('language') === 'ru' ? 'Доктор Дмитрий Козлов' : 
+            t('language') === 'uz' ? 'Doktor Dmitriy Kozlov' :
+            t('language') === 'ar' ? 'الدكتور دميتري كوزلوف' :
+            t('language') === 'zh' ? '德米特里·科兹洛夫医生' :
+            'Dr. Dmitry Kozlov',
+      specialty: t('doctors.specialties.neurologist'),
+      experience: `20 ${t('doctors.experience')}`,
       image: 'https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYwOTY5ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      description: 'Ведущий специалист по заболеваниям нервной системы',
-      achievements: [
-        'Доктор наук',
-        'Международный эксперт',
-        'Лектор конференций'
-      ],
+      description: t('doctors.descriptions.neurologist'),
+      achievements: t('doctors.achievements.neurologist', { returnObjects: true }),
       color: 'from-purple-600 to-indigo-700'
     },
     {
-      name: 'Доктор Анна Волкова',
-      specialty: 'Терапевт',
-      experience: '10 лет опыта',
+      name: t('language') === 'ru' ? 'Доктор Анна Волкова' : 
+            t('language') === 'uz' ? 'Doktor Anna Volkova' :
+            t('language') === 'ar' ? 'الدكتورة آنا فولكوفا' :
+            t('language') === 'zh' ? '安娜·沃尔科娃医生' :
+            'Dr. Anna Volkova',
+      specialty: t('doctors.specialties.therapist'),
+      experience: `10 ${t('doctors.experience')}`,
       image: 'https://images.unsplash.com/photo-1719610894782-7b376085e200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjA5Mzk1MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      description: 'Врач общей практики, специалист по профилактической медицине',
-      achievements: [
-        'Магистр здравоохранения',
-        'Эксперт ЗОЖ',
-        '3000+ пациентов'
-      ],
+      description: t('doctors.descriptions.therapist'),
+      achievements: t('doctors.achievements.therapist', { returnObjects: true }),
       color: 'from-teal-500 to-teal-600'
     },
     {
-      name: 'Доктор Сергей Николаев',
-      specialty: 'Уролог',
-      experience: '14 лет опыта',
+      name: t('language') === 'ru' ? 'Доктор Сергей Николаев' : 
+            t('language') === 'uz' ? 'Doktor Sergey Nikolayev' :
+            t('language') === 'ar' ? 'الدكتور سيرجي نيكولايف' :
+            t('language') === 'zh' ? '谢尔盖·尼古拉耶夫医生' :
+            'Dr. Sergey Nikolayev',
+      specialty: t('doctors.specialties.urologist'),
+      experience: `14 ${t('doctors.experience')}`,
       image: 'https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYwOTY5ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
-      description: 'Специалист по малоинвазивной хирургии',
-      achievements: [
-        'Лапароскопия',
-        'Эндоурология',
-        'Европейская ассоциация урологов'
-      ],
+      description: t('doctors.descriptions.urologist'),
+      achievements: t('doctors.achievements.urologist', { returnObjects: true }),
       color: 'from-orange-500 to-orange-600'
     }
   ];
@@ -88,11 +91,10 @@ export function Doctors() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-[#E84E27] mb-4">
-            Познакомьтесь с нашей<br />командой экспертов
+            {t('doctors.title')}
           </h2>
           <p className="text-[#718096] max-w-2xl mx-auto">
-            Мы — это команда высококвалифицированных специалистов, объединенных общей целью: 
-            обеспечить вам наилучшее медицинское обслуживание и заботу
+            {t('doctors.subtitle')}
           </p>
         </div>
 

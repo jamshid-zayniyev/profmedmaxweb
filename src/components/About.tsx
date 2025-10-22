@@ -1,15 +1,11 @@
 import { CheckCircle } from 'lucide-react';
 import { Button } from './ui/button';
+import { useTranslation } from 'react-i18next';
 
 export function About() {
-  const features = [
-    'Современное медицинское оборудование',
-    'Высококвалифицированные специалисты',
-    'Индивидуальный подход к каждому',
-    'Комфортные условия пребывания',
-    'Доступные цены на услуги',
-    'Удобное расположение клиники'
-  ];
+  const { t } = useTranslation();
+
+  const features = t('about.features', { returnObjects: true });
 
   const scrollToAppointment = () => {
     const element = document.getElementById('appointment');
@@ -27,7 +23,7 @@ export function About() {
             <div className="absolute -top-4 -left-4 w-full h-full bg-[#5B4E99] rounded-2xl opacity-10"></div>
             <img
               src="https://images.unsplash.com/photo-1758691461935-202e2ef6b69f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY29uc3VsdGF0aW9uJTIwZG9jdG9yJTIwcGF0aWVudHxlbnwxfHx8fDE3NjEwMjUzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-              alt="О нашей клинике"
+              alt={t('about.title')}
               className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
             />
           </div>
@@ -35,17 +31,13 @@ export function About() {
           {/* Right Content - Text */}
           <div>
             <h2 className="text-[#2D1B69] mb-6">
-              О нашей клинике
+              {t('about.title')}
             </h2>
             <p className="text-[#718096] mb-6 leading-relaxed">
-              PMM PROFMEDMAX — современная многопрофильная медицинская клиника, 
-              оснащенная новейшим оборудованием и укомплектованная 
-              высококвалифицированными специалистами.
+              {t('about.description1')}
             </p>
             <p className="text-[#718096] mb-8 leading-relaxed">
-              Мы предоставляем широкий спектр медицинских услуг, от профилактических 
-              осмотров до сложных диагностических процедур. Наша цель — обеспечить 
-              каждому пациенту качественную медицинскую помощь в комфортных условиях.
+              {t('about.description2')}
             </p>
 
             <div className="grid md:grid-cols-2 gap-4 mb-8">
@@ -61,7 +53,7 @@ export function About() {
               onClick={scrollToAppointment}
               className="bg-[#5B4E99] hover:bg-[#3F2A7D] text-white px-8 py-6 rounded-md font-semibold"
             >
-              Записаться на консультацию
+              {t('about.consultationButton')}
             </Button>
           </div>
         </div>

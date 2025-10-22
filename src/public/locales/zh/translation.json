@@ -1,0 +1,233 @@
+{
+  "header": {
+    "home": "首页",
+    "services": "服务项目",
+    "about": "关于我们",
+    "reviews": "客户评价",
+    "contacts": "联系方式",
+    "appointment": "预约就诊",
+    "chooseLanguage": "选择语言:",
+    "toggleMenu": "切换菜单"
+  },
+  "hero": {
+    "title": "为健康生活方式提供优质治疗",
+    "subtitle": "采用先进技术和对每位患者的个性化方法，全面关注您的健康。",
+    "clinicsButton": "我们的诊所",
+    "searchTitle": "寻找医生",
+    "searchPlaceholder": "输入专业领域...",
+    "stats": {
+      "patients": "满意患者",
+      "doctors": "医生",
+      "awards": "奖项",
+      "experience": "年经验"
+    },
+    "online": "全天在线"
+  },
+  "departments": {
+    "title": "科室类别",
+    "subtitle": "来自经验丰富的专家的广泛医疗服务",
+    "cardiology": "心脏病学",
+    "neurology": "神经病学",
+    "orthopedics": "骨科",
+    "ophthalmology": "眼科",
+    "pediatrics": "儿科",
+    "therapy": "内科"
+  },
+  "services": {
+    "mainTitle": "为您和您的亲人提供世界一流的医疗服务",
+    "ambulance": {
+      "title": "救护车",
+      "description": "24/7紧急服务，随时准备在危急情况下提供支持。配备现代设备，用于处理创伤、心脏和其他紧急情况。"
+    },
+    "laboratory": {
+      "title": "实验室服务",
+      "description": "全面的实验室检测，提供准确及时的医疗诊断。血液、尿液和其他检测用于诊断和治疗监测。"
+    },
+    "radiology": {
+      "title": "放射学和诊断",
+      "description": "先进的医学诊断成像方法，包括X光、CT、MRI和超声检查。现代设备确保准确诊断和患者便利。"
+    },
+    "pharmacy": {
+      "title": "药房",
+      "description": "现场药房提供处方药和非处方药。补充剂和维生素、止痛药、卫生产品，获取必要药物。"
+    }
+  },
+  "trusted": {
+    "title": "值得信赖的领先医疗保健提供商",
+    "description1": "凭借20多年的医疗保健卓越经验，我们提供全面的医疗服务，拥有无与伦比的患者护理和临床卓越。我们经验丰富的医疗专业人员团队致力于提供最高质量的医疗保健。",
+    "description2": "从常规检查到专业治疗，我们使用最新技术和循证实践提供完整的医疗服务范围。",
+    "features": {
+      "expertTeam": "专家医疗团队",
+      "emergencyCare": "24/7紧急护理",
+      "patientFocused": "以患者为中心",
+      "modernEquipment": "现代设备",
+      "comprehensiveServices": "综合医疗服务",
+      "advancedTech": "先进技术"
+    },
+    "stats": {
+      "years": "年经验",
+      "specialists": "专家",
+      "patients": "满意患者"
+    }
+  },
+  "doctors": {
+    "title": "认识我们的专家团队",
+    "subtitle": "我们是一支高素质的专家团队，共同的目标是：为您提供最好的医疗护理和关怀",
+    "specialties": {
+      "cardiologist": "首席心脏病专家",
+      "orthopedicSurgeon": "骨科医生",
+      "pediatrician": "最高类别儿科医生",
+      "neurologist": "神经科医生",
+      "therapist": "内科医生",
+      "urologist": "泌尿科医生"
+    },
+    "experience": "年经验",
+    "descriptions": {
+      "cardiologist": "心血管疾病专家，医学科学候选人",
+      "orthopedicSurgeon": "关节置换和运动医学专家",
+      "pediatrician": "儿童疾病和免疫学专家",
+      "neurologist": "神经系统疾病领先专家",
+      "therapist": "全科医生，预防医学专家",
+      "urologist": "微创外科专家"
+    },
+    "achievements": {
+      "cardiologist": [
+        "500+ 手术",
+        "\"2024年最佳心脏病专家\"奖",
+        "国际认证"
+      ],
+      "orthopedicSurgeon": [
+        "1000+ 手术",
+        "教授",
+        "在欧洲领先诊所的经验"
+      ],
+      "pediatrician": [
+        "5000+ 儿童",
+        "疫苗接种证书",
+        "科学文章作者"
+      ],
+      "neurologist": [
+        "科学博士",
+        "国际专家",
+        "会议讲师"
+      ],
+      "therapist": [
+        "公共卫生硕士",
+        "健康生活方式专家",
+        "3000+ 患者"
+      ],
+      "urologist": [
+        "腹腔镜手术",
+        "腔内泌尿学",
+        "欧洲泌尿外科协会"
+      ]
+    }
+  },
+  "about": {
+    "title": "关于我们的诊所",
+    "description1": "PMM PROFMEDMAX 是一家现代化的多学科医疗诊所，配备最新设备并由高素质的专业人员组成。",
+    "description2": "我们提供广泛的医疗服务，从预防性检查到复杂的诊断程序。我们的目标是在舒适的环境中为每位患者提供优质的医疗护理。",
+    "features": [
+      "现代医疗设备",
+      "高素质专家",
+      "个性化服务",
+      "舒适的就诊环境",
+      "实惠的服务价格",
+      "便利的诊所位置"
+    ],
+    "consultationButton": "预约咨询"
+  },
+  "reviews": {
+    "title": "患者评价",
+    "subtitle": "我们重视每位患者的意见，并努力变得更好",
+    "patient": "患者",
+    "reviewsList": [
+      {
+        "name": "安娜·彼得罗娃",
+        "text": "优秀的诊所，员工很棒！医生非常细心和专业。特别感谢伊万诺娃医生提供的高质量治疗。"
+      },
+      {
+        "name": "德米特里·索科洛夫",
+        "text": "现代设备，干净舒适。在线预约，一切进行得很快，无需排队。推荐！"
+      },
+      {
+        "name": "叶莲娜·斯米尔诺娃",
+        "text": "对服务非常满意！医生解释清楚，认真倾听。价格合理，质量一流。"
+      }
+    ]
+  },
+  "contacts": {
+    "title": "联系我们",
+    "subtitle": "我们随时准备帮助您并回答您的问题",
+    "contactInfo": "联系信息",
+    "appointmentTitle": "预约就诊",
+    "address": {
+      "title": "地址",
+      "line1": "医疗街123号",
+      "line2": "莫斯科，俄罗斯 101000"
+    },
+    "phone": {
+      "title": "电话",
+      "number1": "+7 (495) 123-45-67",
+      "number2": "+7 (495) 123-45-68"
+    },
+    "email": {
+      "title": "邮箱",
+      "address": "info@profmedmax.ru"
+    },
+    "hours": {
+      "title": "工作时间",
+      "weekdays": "周一至周五: 8:00 - 20:00",
+      "weekends": "周六至周日: 9:00 - 18:00",
+      "emergency": "紧急护理: 24/7"
+    },
+    "form": {
+      "name": "全名 *",
+      "namePlaceholder": "张三",
+      "email": "邮箱 *",
+      "emailPlaceholder": "zhang@example.com",
+      "phone": "电话 *",
+      "phonePlaceholder": "+7 (999) 123-45-67",
+      "message": "消息",
+      "messagePlaceholder": "告诉我们您的症状或问题...",
+      "submit": "提交申请"
+    },
+    "toast": {
+      "error": "请填写所有必填字段",
+      "success": "谢谢！我们会尽快与您联系。"
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "PMM PROFMEDMAX",
+      "description": "提供优质医疗服务的现代化多学科医疗诊所。"
+    },
+    "quickLinks": {
+      "title": "快速链接",
+      "about": "关于诊所",
+      "services": "我们的服务",
+      "doctors": "医生",
+      "contacts": "联系方式",
+      "careers": "职业机会"
+    },
+    "services": {
+      "title": "我们的服务",
+      "cardiology": "心脏病学",
+      "neurology": "神经病学",
+      "orthopedics": "骨科",
+      "pediatrics": "儿科",
+      "therapy": "内科"
+    },
+    "contact": {
+      "title": "联系方式",
+      "address": "医疗街123号，莫斯科，俄罗斯",
+      "phone": "+7 (495) 123-45-67",
+      "email": "info@profmedmax.ru"
+    },
+    "bottom": {
+      "copyright": "© {{year}} PMM PROFMEDMAX。保留所有权利。",
+      "privacy": "隐私政策",
+      "terms": "使用条款"
+    }
+  }
+}

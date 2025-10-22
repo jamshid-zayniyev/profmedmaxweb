@@ -1,0 +1,233 @@
+{
+  "header": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About Us",
+    "reviews": "Reviews",
+    "contacts": "Contacts",
+    "appointment": "Book Appointment",
+    "chooseLanguage": "Choose language:",
+    "toggleMenu": "Toggle menu"
+  },
+  "hero": {
+    "title": "Premium treatment for a healthy lifestyle",
+    "subtitle": "A comprehensive approach to your health using advanced technologies and individual approach to each patient.",
+    "clinicsButton": "Our clinics",
+    "searchTitle": "Find a doctor",
+    "searchPlaceholder": "Enter specialty...",
+    "stats": {
+      "patients": "Happy patients",
+      "doctors": "Doctors",
+      "awards": "Awards",
+      "experience": "Years of experience"
+    },
+    "online": "Always online"
+  },
+  "departments": {
+    "title": "Department Categories",
+    "subtitle": "A wide range of medical services from experienced specialists",
+    "cardiology": "Cardiology",
+    "neurology": "Neurology",
+    "orthopedics": "Orthopedics",
+    "ophthalmology": "Ophthalmology",
+    "pediatrics": "Pediatrics",
+    "therapy": "Therapy"
+  },
+  "services": {
+    "mainTitle": "World-class medical services for you and your loved ones",
+    "ambulance": {
+      "title": "Ambulance",
+      "description": "24/7 emergency service ready to provide support in critical situations. Equipped with modern equipment for working with injuries, cardiac and other emergency conditions."
+    },
+    "laboratory": {
+      "title": "Laboratory Services",
+      "description": "Comprehensive laboratory tests for accurate and timely medical diagnosis. Blood, urine and other tests for diagnosis and treatment monitoring."
+    },
+    "radiology": {
+      "title": "Radiology and Diagnostics",
+      "description": "Advanced medical diagnostic imaging methods including X-ray, CT, MRI and ultrasound. Modern equipment for accurate diagnosis and patient convenience."
+    },
+    "pharmacy": {
+      "title": "Pharmacy",
+      "description": "On-site pharmacy provides prescription and over-the-counter medications. Supplements and vitamins, pain relievers, hygiene products, access to necessary medications."
+    }
+  },
+  "trusted": {
+    "title": "Leading healthcare provider you can trust",
+    "description1": "With over 20 years of healthcare excellence, we provide comprehensive medical services with unparalleled patient care and clinical excellence. Our team of experienced medical professionals is dedicated to delivering the highest quality healthcare.",
+    "description2": "From routine check-ups to specialized treatments, we offer a complete spectrum of medical services using the latest technologies and evidence-based practices.",
+    "features": {
+      "expertTeam": "Expert medical team",
+      "emergencyCare": "24/7 emergency care",
+      "patientFocused": "Patient-focused approach",
+      "modernEquipment": "Modern equipment",
+      "comprehensiveServices": "Comprehensive medical services",
+      "advancedTech": "Advanced technologies"
+    },
+    "stats": {
+      "years": "Years of experience",
+      "specialists": "Specialists",
+      "patients": "Satisfied patients"
+    }
+  },
+  "doctors": {
+    "title": "Meet our team of experts",
+    "subtitle": "We are a team of highly qualified specialists united by a common goal: to provide you with the best medical care and attention",
+    "specialties": {
+      "cardiologist": "Chief Cardiologist",
+      "orthopedicSurgeon": "Orthopedic Surgeon",
+      "pediatrician": "Pediatrician of the Highest Category",
+      "neurologist": "Neurologist",
+      "therapist": "Therapist",
+      "urologist": "Urologist"
+    },
+    "experience": "years of experience",
+    "descriptions": {
+      "cardiologist": "Specialist in cardiovascular diseases, Candidate of Medical Sciences",
+      "orthopedicSurgeon": "Expert in joint replacement and sports medicine",
+      "pediatrician": "Specialist in childhood diseases and immunology",
+      "neurologist": "Leading specialist in nervous system diseases",
+      "therapist": "General practitioner, specialist in preventive medicine",
+      "urologist": "Specialist in minimally invasive surgery"
+    },
+    "achievements": {
+      "cardiologist": [
+        "500+ surgeries",
+        "\"Best Cardiologist 2024\" award",
+        "International certification"
+      ],
+      "orthopedicSurgeon": [
+        "1000+ surgeries",
+        "Professor",
+        "Experience in leading European clinics"
+      ],
+      "pediatrician": [
+        "5000+ children",
+        "Vaccination certificate",
+        "Author of scientific articles"
+      ],
+      "neurologist": [
+        "Doctor of Sciences",
+        "International expert",
+        "Conference lecturer"
+      ],
+      "therapist": [
+        "Master of Public Health",
+        "Healthy lifestyle expert",
+        "3000+ patients"
+      ],
+      "urologist": [
+        "Laparoscopy",
+        "Endourology",
+        "European Association of Urology"
+      ]
+    }
+  },
+  "about": {
+    "title": "About Our Clinic",
+    "description1": "PMM PROFMEDMAX is a modern multidisciplinary medical clinic equipped with the latest equipment and staffed by highly qualified specialists.",
+    "description2": "We provide a wide range of medical services, from preventive examinations to complex diagnostic procedures. Our goal is to provide every patient with quality medical care in comfortable conditions.",
+    "features": [
+      "Modern medical equipment",
+      "Highly qualified specialists",
+      "Individual approach to everyone",
+      "Comfortable stay conditions",
+      "Affordable service prices",
+      "Convenient clinic location"
+    ],
+    "consultationButton": "Book a Consultation"
+  },
+  "reviews": {
+    "title": "Our Patients' Reviews",
+    "subtitle": "We value every patient's opinion and strive to become better",
+    "patient": "Patient",
+    "reviewsList": [
+      {
+        "name": "Anna Petrova",
+        "text": "Excellent clinic with great staff! Doctors are very attentive and professional. Especially grateful to Dr. Ivanova for quality treatment."
+      },
+      {
+        "name": "Dmitry Sokolov",
+        "text": "Modern equipment, cleanliness and comfort. Booked an appointment online, everything went quickly and without queues. I recommend!"
+      },
+      {
+        "name": "Elena Smirnova",
+        "text": "Very satisfied with the service! Doctors explain everything clearly and listen carefully. Prices are reasonable, quality is excellent."
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Contact Us",
+    "subtitle": "We are always ready to help and answer your questions",
+    "contactInfo": "Contact Information",
+    "appointmentTitle": "Book an Appointment",
+    "address": {
+      "title": "Address",
+      "line1": "Medical St., 123",
+      "line2": "Moscow, Russia 101000"
+    },
+    "phone": {
+      "title": "Phone",
+      "number1": "+7 (495) 123-45-67",
+      "number2": "+7 (495) 123-45-68"
+    },
+    "email": {
+      "title": "Email",
+      "address": "info@profmedmax.ru"
+    },
+    "hours": {
+      "title": "Working Hours",
+      "weekdays": "Mon-Fri: 8:00 AM - 8:00 PM",
+      "weekends": "Sat-Sun: 9:00 AM - 6:00 PM",
+      "emergency": "Emergency care: 24/7"
+    },
+    "form": {
+      "name": "Full Name *",
+      "namePlaceholder": "John Smith",
+      "email": "Email *",
+      "emailPlaceholder": "john@example.com",
+      "phone": "Phone *",
+      "phonePlaceholder": "+7 (999) 123-45-67",
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your symptoms or questions...",
+      "submit": "Submit Application"
+    },
+    "toast": {
+      "error": "Please fill in all required fields",
+      "success": "Thank you! We will contact you shortly."
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "PMM PROFMEDMAX",
+      "description": "A modern multidisciplinary medical clinic providing quality healthcare services."
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About Clinic",
+      "services": "Our Services",
+      "doctors": "Doctors",
+      "contacts": "Contacts",
+      "careers": "Careers"
+    },
+    "services": {
+      "title": "Our Services",
+      "cardiology": "Cardiology",
+      "neurology": "Neurology",
+      "orthopedics": "Orthopedics",
+      "pediatrics": "Pediatrics",
+      "therapy": "Therapy"
+    },
+    "contact": {
+      "title": "Contacts",
+      "address": "Medical St., 123, Moscow, Russia",
+      "phone": "+7 (495) 123-45-67",
+      "email": "info@profmedmax.ru"
+    },
+    "bottom": {
+      "copyright": "© {{year}} PMM PROFMEDMAX. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use"
+    }
+  }
+}

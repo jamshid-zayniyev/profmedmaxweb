@@ -1,13 +1,16 @@
 import { CheckCircle2 } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function TrustedProvider() {
+  const { t } = useTranslation();
+
   const features = [
-    'Экспертная медицинская команда',
-    'Экстренная помощь 24/7',
-    'Ориентированность на пациента',
-    'Современное оборудование',
-    'Комплексные медицинские услуги',
-    'Передовые технологии'
+    t('trusted.features.expertTeam'),
+    t('trusted.features.emergencyCare'),
+    t('trusted.features.patientFocused'),
+    t('trusted.features.modernEquipment'),
+    t('trusted.features.comprehensiveServices'),
+    t('trusted.features.advancedTech')
   ];
 
   return (
@@ -17,21 +20,15 @@ export function TrustedProvider() {
           {/* Left Content */}
           <div>
             <h2 className="text-[#2D3748] mb-6 leading-tight">
-              Ведущий поставщик<br />
-              медицинских услуг, которому можно<br />
-              доверять
+              {t('trusted.title')}
             </h2>
             
             <p className="text-[#718096] mb-8 leading-relaxed">
-              С более чем 20-летним опытом превосходства в здравоохранении, мы предоставляем 
-              комплексные медицинские услуги с непревзойденной заботе о пациентах и клиническому 
-              совершенству. Наша команда опытных медицинских специалистов посвящена оказанию 
-              медицинской помощи высочайшего качества.
+              {t('trusted.description1')}
             </p>
             
             <p className="text-[#718096] mb-8 leading-relaxed">
-              От обычных осмотров до специализированного лечения, мы предлагаем полный 
-              спектр медицинских услуг с использованием новейших технологий и научно-обоснованных практик.
+              {t('trusted.description2')}
             </p>
 
             {/* Features List */}
@@ -50,15 +47,15 @@ export function TrustedProvider() {
             <div className="grid grid-cols-3 gap-8">
               <div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
-                <div className="text-sm text-[#718096]">Лет опыта</div>
+                <div className="text-sm text-[#718096]">{t('trusted.stats.years')}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
-                <div className="text-sm text-[#718096]">Специалистов</div>
+                <div className="text-sm text-[#718096]">{t('trusted.stats.specialists')}</div>
               </div>
               <div>
                 <div className="text-4xl font-bold text-blue-600 mb-2">10k+</div>
-                <div className="text-sm text-[#718096]">Довольных пациентов</div>
+                <div className="text-sm text-[#718096]">{t('trusted.stats.patients')}</div>
               </div>
             </div>
           </div>
@@ -68,7 +65,7 @@ export function TrustedProvider() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjB0ZWFtJTIwaG9zcGl0YWwlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYxMDI2NTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-                alt="Профессиональная медицинская команда"
+                alt={t('trusted.title')}
                 className="w-full h-[600px] object-cover"
               />
             </div>

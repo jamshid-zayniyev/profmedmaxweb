@@ -1,34 +1,37 @@
 import { Heart, Brain, Bone, Eye, Baby, Stethoscope } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function DepartmentCategory() {
+  const { t } = useTranslation();
+
   const departments = [
     {
-      name: 'Кардиология',
+      name: t('departments.cardiology'),
       icon: Heart,
       color: 'from-red-500 to-pink-500'
     },
     {
-      name: 'Неврология',
+      name: t('departments.neurology'),
       icon: Brain,
       color: 'from-purple-500 to-indigo-500'
     },
     {
-      name: 'Ортопедия',
+      name: t('departments.orthopedics'),
       icon: Bone,
       color: 'from-blue-500 to-cyan-500'
     },
     {
-      name: 'Офтальмология',
+      name: t('departments.ophthalmology'),
       icon: Eye,
       color: 'from-green-500 to-emerald-500'
     },
     {
-      name: 'Педиатрия',
+      name: t('departments.pediatrics'),
       icon: Baby,
       color: 'from-yellow-500 to-orange-500'
     },
     {
-      name: 'Терапия',
+      name: t('departments.therapy'),
       icon: Stethoscope,
       color: 'from-teal-500 to-cyan-500'
     }
@@ -38,9 +41,9 @@ export function DepartmentCategory() {
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-[#2D1B69] mb-4">Категории отделений</h2>
+          <h2 className="text-[#2D1B69] mb-4">{t('departments.title')}</h2>
           <p className="text-[#718096] max-w-2xl mx-auto">
-            Широкий спектр медицинских услуг от опытных специалистов
+            {t('departments.subtitle')}
           </p>
         </div>
 

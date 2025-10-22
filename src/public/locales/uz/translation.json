@@ -1,0 +1,233 @@
+{
+  "header": {
+    "home": "Bosh sahifa",
+    "services": "Xizmatlar",
+    "about": "Biz haqimizda",
+    "reviews": "Sharhlar",
+    "contacts": "Aloqa",
+    "appointment": "Qabulga yozilish",
+    "chooseLanguage": "Tilni tanlang:",
+    "toggleMenu": "Menyuni almashtirish"
+  },
+  "hero": {
+    "title": "Sog'lom turmush tarzi uchun premium davolash",
+    "subtitle": "Zamonaviy texnologiyalar va har bir bemor uchun individual yondashuv yordamida sog'lig'ingizga kompleks yondashuv.",
+    "clinicsButton": "Bizning klinikalar",
+    "searchTitle": "Shifokor qidirish",
+    "searchPlaceholder": "Mutaxassislikni kiriting...",
+    "stats": {
+      "patients": "Baxtli bemorlar",
+      "doctors": "Shifokorlar",
+      "awards": "Mukofotlar",
+      "experience": "Yillik tajriba"
+    },
+    "online": "Doim onlayn"
+  },
+  "departments": {
+    "title": "Bo'limlar toifalari",
+    "subtitle": "Tajribali mutaxassislardan keng tibbiy xizmatlar",
+    "cardiology": "Kardiologiya",
+    "neurology": "Nevrologiya",
+    "orthopedics": "Ortopediya",
+    "ophthalmology": "Oftalmologiya",
+    "pediatrics": "Pediatriya",
+    "therapy": "Terapiya"
+  },
+  "services": {
+    "mainTitle": "Siz va yaqinlaringiz uchun dunyo standartidagi tibbiy xizmatlar",
+    "ambulance": {
+      "title": "Tez yordam",
+      "description": "Kritik vaziyatlarda yordam ko'rsatishga tayyor bo'lgan 24 soatlik favqulodda yordam xizmati. Shikastlanishlar, yurak-qon tomir va boshqa shoshilinch holatlar bilan ishlash uchun zamonaviy uskunalar bilan jihozlangan."
+    },
+    "laboratory": {
+      "title": "Laboratoriya xizmatlari",
+      "description": "Aniq va o'z vaqtida tibbiy diagnostika qilish uchun kompleks laboratoriya tadqiqotlari. Tashxis qo'yish va davolashni kuzatish uchun qon, siydik va boshqa tadqiqotlar."
+    },
+    "radiology": {
+      "title": "Radiologiya va diagnostika",
+      "description": "Rentgen, KT, MRT va ultratovush tekshiruvi kabi ilg'or tibbiy diagnostik tasvirlash usullari. Aniq diagnostika va bemorlarning qulayligi uchun zamonaviy uskunalar."
+    },
+    "pharmacy": {
+      "title": "Dorixona",
+      "description": "Klinika hududidagi dorixona retsept va retseptsiz dori-darmonlarni taqdim etadi. Qo'shimcha moddalar va vitaminlar, og'riq qoldiruvchi vositalar, gigiena vositalari, kerakli preparatlarga kirish."
+    }
+  },
+  "trusted": {
+    "title": "Ishonchli tibbiy xizmatlar yetkazib beruvchi",
+    "description1": "20 yildan ortiq sog'liqni saqlash sohasidagi tajriba bilan biz bemorlarga g'amxo'rlik va klinik mukammallikda tengsiz kompleks tibbiy xizmatlarni taqdim etamiz. Tajribali tibbiy mutaxassislar jamoasi eng yuqori sifatli tibbiy yordam ko'rsatishga bag'ishlangan.",
+    "description2": "Oddiy tekshiruvlardan tortib mutaxassislashtirilgan davolashgacha biz eng yangi texnologiyalar va ilmiy asoslangan amaliyotlardan foydalangan holda to'liq tibbiy xizmatlar spektrini taklif etamiz.",
+    "features": {
+      "expertTeam": "Ekspert tibbiy jamoa",
+      "emergencyCare": "24/7 favqulodda yordam",
+      "patientFocused": "Bemorga yo'naltirilgan",
+      "modernEquipment": "Zamonaviy uskunalar",
+      "comprehensiveServices": "Kompleks tibbiy xizmatlar",
+      "advancedTech": "Ilg'or texnologiyalar"
+    },
+    "stats": {
+      "years": "Yillik tajriba",
+      "specialists": "Mutaxassislar",
+      "patients": "Mamnun bemorlar"
+    }
+  },
+  "doctors": {
+    "title": "Bizning ekspertlar jamoamiz bilan tanishing",
+    "subtitle": "Biz - sizga eng yaxshi tibbiy xizmat va g'amxo'rlikni ta'minlash umumiy maqsadida birlashgan yuqori malakali mutaxassislar jamoasimiz",
+    "specialties": {
+      "cardiologist": "Bosh kardiolog",
+      "orthopedicSurgeon": "Ortopedik xirurg",
+      "pediatrician": "Oliy toifali pediatr",
+      "neurologist": "Nevrolog",
+      "therapist": "Terapevt",
+      "urologist": "Urolog"
+    },
+    "experience": "yillik tajriba",
+    "descriptions": {
+      "cardiologist": "Yurak-qon tomir kasalliklari bo'yicha mutaxassis, tibbiyot fanlari nomzodi",
+      "orthopedicSurgeon": "Bog'imlar endoprotezlari va sport tibbiyoti bo'yicha ekspert",
+      "pediatrician": "Bolalar kasalliklari va immunologiya bo'yicha mutaxassis",
+      "neurologist": "Asab tizimi kasalliklari bo'yicha yetakchi mutaxassis",
+      "therapist": "Umumiy amaliyot shifokori, profilaktik tibbiyot mutaxassisi",
+      "urologist": "Minimal invaziv xirurgiya mutaxassisi"
+    },
+    "achievements": {
+      "cardiologist": [
+        "500+ operatsiya",
+        "\"2024-yilning eng yaxshi kardiologi\" mukofoti",
+        "Xalqaro sertifikat"
+      ],
+      "orthopedicSurgeon": [
+        "1000+ operatsiya",
+        "Professor",
+        "Yevropaning yetakchi klinikalarida tajriba"
+      ],
+      "pediatrician": [
+        "5000+ bola",
+        "Emlash bo'yicha sertifikat",
+        "Ilmiy maqolalar muallifi"
+      ],
+      "neurologist": [
+        "Fan doktori",
+        "Xalqaro ekspert",
+        "Konferensiyalar ma'ruzachisi"
+      ],
+      "therapist": [
+        "Sog'liqni saqlash magistri",
+        "Sog'lom turmush tarzi eksperti",
+        "3000+ bemor"
+      ],
+      "urologist": [
+        "Laparoskopiya",
+        "Endourologiya",
+        "Yevropa urologlar assotsiatsiyasi"
+      ]
+    }
+  },
+  "about": {
+    "title": "Bizning klinikamiz haqida",
+    "description1": "PMM PROFMEDMAX — eng yangi uskunalar bilan jihozlangan va yuqori malakali mutaxassislar bilan ta'minlangan zamonaviy ko'p tarmoqli tibbiy klinika.",
+    "description2": "Biz profilaktik tekshiruvlardan tortib murakkab diagnostik protseduralargacha bo'lgan keng tibbiy xizmatlar spektrini taqdim etamiz. Maqsadimiz - har bir bemorga qulay sharoitlarda sifatli tibbiy yordam ko'rsatish.",
+    "features": [
+      "Zamonaviy tibbiy uskunalar",
+      "Yuqori malakali mutaxassislar",
+      "Harbiriga individual yondashuv",
+      "Qulay dam olish sharoitlari",
+      "Xizmatlar uchun arzon narxlar",
+      "Klinikaning qulay joylashuvi"
+    ],
+    "consultationButton": "Konsultatsiyaga yozilish"
+  },
+  "reviews": {
+    "title": "Bemorlarimizning sharhlari",
+    "subtitle": "Biz har bir bemorning fikrini qadrlaymiz va yaxshilanishga intilamiz",
+    "patient": "Bemor",
+    "reviewsList": [
+      {
+        "name": "Anna Petrova",
+        "text": "A'lo xodimlarga ega ajoyib klinika! Shifokorlar juda diqqatli va professional. Ayniqsa doktor Ivanovaga sifatli davolash uchun minnatdorman."
+      },
+      {
+        "name": "Dmitriy Sokolov",
+        "text": "Zamonaviy uskunalar, tozalik va qulaylik. Onlayn qabulga yozildim, hammasi tez va navbatlarsiz o'tdi. Tavsiya etaman!"
+      },
+      {
+        "name": "Elena Smirnova",
+        "text": "Xizmatdan juda mamnunman! Shifokorlar hamma narsani tushunarli izohlaydilar, diqqat bilan tinglaydilar. Narxlar maqul, sifat yuqori darajada."
+      }
+    ]
+  },
+  "contacts": {
+    "title": "Biz bilan bog'laning",
+    "subtitle": "Biz har doim yordam berishga va savollaringizga javob berishga tayyormiz",
+    "contactInfo": "Aloqa ma'lumotlari",
+    "appointmentTitle": "Qabulga yozilish",
+    "address": {
+      "title": "Manzil",
+      "line1": "Meditsina ko'chasi, 123-uy",
+      "line2": "Moskva shahri, Rossiya 101000"
+    },
+    "phone": {
+      "title": "Telefon",
+      "number1": "+7 (495) 123-45-67",
+      "number2": "+7 (495) 123-45-68"
+    },
+    "email": {
+      "title": "Email",
+      "address": "info@profmedmax.ru"
+    },
+    "hours": {
+      "title": "Ish vaqtlari",
+      "weekdays": "Dush-Jum: 8:00 - 20:00",
+      "weekends": "Shan-Yak: 9:00 - 18:00",
+      "emergency": "Favqulodda yordam: 24/7"
+    },
+    "form": {
+      "name": "To'liq ism *",
+      "namePlaceholder": "Ivan Ivanov",
+      "email": "Email *",
+      "emailPlaceholder": "ivan@example.com",
+      "phone": "Telefon *",
+      "phonePlaceholder": "+7 (999) 123-45-67",
+      "message": "Xabar",
+      "messagePlaceholder": "Simptomlaringiz yoki savollaringiz haqida gapiring...",
+      "submit": "Ariza yuborish"
+    },
+    "toast": {
+      "error": "Iltimos, barcha majburiy maydonlarni to'ldiring",
+      "success": "Rahmat! Tez orada siz bilan bog'lanamiz."
+    }
+  },
+  "footer": {
+    "about": {
+      "title": "PMM PROFMEDMAX",
+      "description": "Sifatli sog'liqni saqlash xizmatlarini taqdim etadigan zamonaviy ko'p tarmoqli tibbiy klinika."
+    },
+    "quickLinks": {
+      "title": "Tez havolalar",
+      "about": "Klinika haqida",
+      "services": "Bizning xizmatlar",
+      "doctors": "Shifokorlar",
+      "contacts": "Aloqa",
+      "careers": "Vakansiyalar"
+    },
+    "services": {
+      "title": "Bizning xizmatlar",
+      "cardiology": "Kardiologiya",
+      "neurology": "Nevrologiya",
+      "orthopedics": "Ortopediya",
+      "pediatrics": "Pediatriya",
+      "therapy": "Terapiya"
+    },
+    "contact": {
+      "title": "Aloqa",
+      "address": "Meditsina ko'chasi, 123-uy, Moskva, Rossiya",
+      "phone": "+7 (495) 123-45-67",
+      "email": "info@profmedmax.ru"
+    },
+    "bottom": {
+      "copyright": "© {{year}} PMM PROFMEDMAX. Barcha huquqlar himoyalangan.",
+      "privacy": "Maxfiylik siyosati",
+      "terms": "Foydalanish shartlari"
+    }
+  }
+}

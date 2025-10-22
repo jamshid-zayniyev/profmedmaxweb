@@ -4,9 +4,11 @@ import { Input } from './ui/input';
 import { Textarea } from './ui/textarea';
 import { Label } from './ui/label';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
+import { useTranslation } from 'react-i18next';
 
 export function Contacts() {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,11 +20,11 @@ export function Contacts() {
     e.preventDefault();
     
     if (!formData.name || !formData.email || !formData.phone) {
-      toast.error('Пожалуйста, заполните все обязательные поля');
+      toast.error(t('contacts.toast.error'));
       return;
     }
 
-    toast.success('Спасибо! Мы свяжемся с вами в ближайшее время.');
+    toast.success(t('contacts.toast.success'));
     
     setFormData({
       name: '',
@@ -40,15 +42,15 @@ export function Contacts() {
     <section id="contacts" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-[#2D1B69] mb-4">Свяжитесь с нами</h2>
-          <p className="text-[#718096]">Мы всегда готовы помочь и ответить на ваши вопросы</p>
+          <h2 className="text-[#2D1B69] mb-4">{t('contacts.title')}</h2>
+          <p className="text-[#718096]">{t('contacts.subtitle')}</p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-[#2D1B69] mb-6">Контактная информация</h3>
+              <h3 className="text-[#2D1B69] mb-6">{t('contacts.contactInfo')}</h3>
               
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -56,10 +58,10 @@ export function Contacts() {
                     <MapPin className="w-6 h-6 text-[#5B4E99]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2D3748] mb-1">Адрес</h4>
+                    <h4 className="font-semibold text-[#2D3748] mb-1">{t('contacts.address.title')}</h4>
                     <p className="text-[#718096]">
-                      ул. Медицинская, д. 123<br />
-                      г. Москва, Россия 101000
+                      {t('contacts.address.line1')}<br />
+                      {t('contacts.address.line2')}
                     </p>
                   </div>
                 </div>
@@ -69,10 +71,10 @@ export function Contacts() {
                     <Phone className="w-6 h-6 text-[#5B4E99]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2D3748] mb-1">Телефон</h4>
+                    <h4 className="font-semibold text-[#2D3748] mb-1">{t('contacts.phone.title')}</h4>
                     <p className="text-[#718096]">
-                      <a href="tel:+74951234567" className="hover:text-[#5B4E99]">+7 (495) 123-45-67</a><br />
-                      <a href="tel:+74951234568" className="hover:text-[#5B4E99]">+7 (495) 123-45-68</a>
+                      <a href="tel:+74951234567" className="hover:text-[#5B4E99]">{t('contacts.phone.number1')}</a><br />
+                      <a href="tel:+74951234568" className="hover:text-[#5B4E99]">{t('contacts.phone.number2')}</a>
                     </p>
                   </div>
                 </div>
@@ -82,9 +84,9 @@ export function Contacts() {
                     <Mail className="w-6 h-6 text-[#5B4E99]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2D3748] mb-1">Email</h4>
+                    <h4 className="font-semibold text-[#2D3748] mb-1">{t('contacts.email.title')}</h4>
                     <p className="text-[#718096]">
-                      <a href="mailto:info@profmedmax.ru" className="hover:text-[#5B4E99]">info@profmedmax.ru</a>
+                      <a href="mailto:info@profmedmax.ru" className="hover:text-[#5B4E99]">{t('contacts.email.address')}</a>
                     </p>
                   </div>
                 </div>
@@ -94,11 +96,11 @@ export function Contacts() {
                     <Clock className="w-6 h-6 text-[#5B4E99]" />
                   </div>
                   <div>
-                    <h4 className="font-semibold text-[#2D3748] mb-1">Часы работы</h4>
+                    <h4 className="font-semibold text-[#2D3748] mb-1">{t('contacts.hours.title')}</h4>
                     <p className="text-[#718096]">
-                      Пн-Пт: 8:00 - 20:00<br />
-                      Сб-Вс: 9:00 - 18:00<br />
-                      Экстренная помощь: 24/7
+                      {t('contacts.hours.weekdays')}<br />
+                      {t('contacts.hours.weekends')}<br />
+                      {t('contacts.hours.emergency')}
                     </p>
                   </div>
                 </div>
@@ -113,21 +115,21 @@ export function Contacts() {
                 style={{ border: 0 }}
                 allowFullScreen
                 loading="lazy"
-                title="Расположение клиники на карте"
+                title={t('contacts.title')}
               />
             </div>
           </div>
 
           {/* Contact Form */}
           <div id="appointment" className="bg-[#F8F9FA] p-8 rounded-2xl">
-            <h3 className="text-[#2D1B69] mb-6">Записаться на прием</h3>
+            <h3 className="text-[#2D1B69] mb-6">{t('contacts.appointmentTitle')}</h3>
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <Label htmlFor="name">Полное имя *</Label>
+                <Label htmlFor="name">{t('contacts.form.name')}</Label>
                 <Input
                   id="name"
                   type="text"
-                  placeholder="Иван Иванов"
+                  placeholder={t('contacts.form.namePlaceholder')}
                   value={formData.name}
                   onChange={(e) => handleInputChange('name', e.target.value)}
                   required
@@ -136,11 +138,11 @@ export function Contacts() {
               </div>
 
               <div>
-                <Label htmlFor="email">Email *</Label>
+                <Label htmlFor="email">{t('contacts.form.email')}</Label>
                 <Input
                   id="email"
                   type="email"
-                  placeholder="ivan@example.com"
+                  placeholder={t('contacts.form.emailPlaceholder')}
                   value={formData.email}
                   onChange={(e) => handleInputChange('email', e.target.value)}
                   required
@@ -149,11 +151,11 @@ export function Contacts() {
               </div>
 
               <div>
-                <Label htmlFor="phone">Телефон *</Label>
+                <Label htmlFor="phone">{t('contacts.form.phone')}</Label>
                 <Input
                   id="phone"
                   type="tel"
-                  placeholder="+7 (999) 123-45-67"
+                  placeholder={t('contacts.form.phonePlaceholder')}
                   value={formData.phone}
                   onChange={(e) => handleInputChange('phone', e.target.value)}
                   required
@@ -162,10 +164,10 @@ export function Contacts() {
               </div>
 
               <div>
-                <Label htmlFor="message">Сообщение</Label>
+                <Label htmlFor="message">{t('contacts.form.message')}</Label>
                 <Textarea
                   id="message"
-                  placeholder="Расскажите о ваших симптомах или вопросах..."
+                  placeholder={t('contacts.form.messagePlaceholder')}
                   value={formData.message}
                   onChange={(e) => handleInputChange('message', e.target.value)}
                   rows={4}
@@ -177,7 +179,7 @@ export function Contacts() {
                 type="submit" 
                 className="w-full bg-[#5B4E99] hover:bg-[#3F2A7D] text-white font-semibold py-6 rounded-md"
               >
-                Отправить заявку
+                {t('contacts.form.submit')}
               </Button>
             </form>
           </div>

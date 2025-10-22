@@ -1,38 +1,28 @@
 import { Card, CardContent } from './ui/card';
 import { Star, Quote } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 export function Reviews() {
-  const reviews = [
-    {
-      name: 'Анна Петрова',
-      role: 'Пациент',
-      rating: 5,
-      text: 'Прекрасная клиника с отличным персоналом! Врачи очень внимательные и профессиональные. Особенно благодарна доктору Ивановой за качественное лечение.',
-      avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop'
-    },
-    {
-      name: 'Дмитрий Соколов',
-      role: 'Пациент',
-      rating: 5,
-      text: 'Современное оборудование, чистота и комфорт. Записался на прием онлайн, все прошло быстро и без очередей. Рекомендую!',
-      avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop'
-    },
-    {
-      name: 'Елена Смирнова',
-      role: 'Пациент',
-      rating: 5,
-      text: 'Очень довольна обслуживанием! Врачи объясняют все понятно, внимательно выслушивают. Цены адекватные, качество на высоте.',
-      avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
-    }
-  ];
+  const { t } = useTranslation();
+
+  const reviews = t('reviews.reviewsList', { returnObjects: true }).map((review, index) => ({
+    ...review,
+    role: t('reviews.patient'),
+    rating: 5,
+    avatar: [
+      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
+      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
+      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
+    ][index]
+  }));
 
   return (
     <section id="reviews" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-[#2D1B69] mb-4">Отзывы наших пациентов</h2>
+          <h2 className="text-[#2D1B69] mb-4">{t('reviews.title')}</h2>
           <p className="text-[#718096] max-w-2xl mx-auto">
-            Мы ценим мнение каждого пациента и стремимся стать лучше
+            {t('reviews.subtitle')}
           </p>
         </div>
 
