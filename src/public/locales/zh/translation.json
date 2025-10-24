@@ -232,5 +232,11 @@
       "privacy": "隐私政策",
       "terms": "使用条款"
     }
+  },
+  "statistics": {
+    "happy_patients": "快乐患者",
+    "wards": "医院病房",
+    "awards": "国际认证",
+    "ambulances": "成功手术"
   }
 }

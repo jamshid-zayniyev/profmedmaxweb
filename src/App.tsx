@@ -4,6 +4,7 @@ import { Hero } from './components/Hero';
 import { DepartmentCategory } from './components/DepartmentCategory';
 import { MedicalServices } from './components/MedicalServices';
 import { TrustedProvider } from './components/TrustedProvider';
+import { Statistics } from './components/Statistics'; // Add this import
 import { Doctors } from './components/Doctors';
 import { About } from './components/About';
 import { Reviews } from './components/Reviews';
@@ -19,6 +20,7 @@ export default function App() {
       <MedicalServices />
       <TrustedProvider />
       <Doctors />
+      <Statistics /> 
       <About />
       <Reviews />
       <Contacts />
