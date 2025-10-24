@@ -125,7 +125,7 @@ export function Doctors() {
                 
                 {/* Achievements with Stars */}
                 <div className="space-y-2">
-                  {doctor.achievements.map((achievement, idx) => (
+                  {doctor?.achievements?.map((achievement, idx) => (
                     <div key={idx} className="flex items-start space-x-2">
                       <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
                       <span className="text-sm text-white/90">{achievement}</span>
