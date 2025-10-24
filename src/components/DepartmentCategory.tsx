@@ -39,15 +39,15 @@ export function DepartmentCategory() {
 
   return (
     <section className="py-12 bg-gradient-to-b from-[#E6F0FA] to-[#D1E8FF] ">
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-12">
         <div className="text-center mb-12">
           <h2 className="text-[#2D1B69] mb-4">{t('departments.title')}</h2>
-          <p className="text-[#718096] max-w-2xl mx-auto">
+          <p className="text-[#718096] max-w-2xl mx-auto ">
             {t('departments.subtitle')}
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 mb-12">
           {departments.map((dept, index) => {
             const Icon = dept.icon;
             return (

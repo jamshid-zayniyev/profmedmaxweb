@@ -229,5 +229,11 @@
       "privacy": "Privacy Policy",
       "terms": "Terms of Use"
     }
+  },
+  "statistics": {
+    "happy_patients": "Happy Patients",
+    "wards": "Wards",
+    "awards": "International Certifications",
+    "ambulances": "Successful Operations"
   }
 }

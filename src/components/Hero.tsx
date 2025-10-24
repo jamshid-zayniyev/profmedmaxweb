@@ -1,12 +1,11 @@
 import { Button } from './ui/button';
-import { ArrowRight, Search } from 'lucide-react';
-import { Input } from './ui/input';
+import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export function Hero() {
   const { t } = useTranslation();
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -23,56 +22,48 @@ export function Hero() {
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           {/* Left Content */}
           <div>
-            <h1 className="text-[#2D1B69] mb-6 leading-tight">
-              {t('hero.title')}
+            <h1 className="text-[#2D1B69] text-4xl font-bold mb-6 leading-tight">
+              {t('hero.title', 'Премиальное лечение для здорового образа жизни')}
             </h1>
             
             <p className="text-[#718096] text-lg mb-8 max-w-xl leading-relaxed">
-              {t('hero.subtitle')}
-
+              {t('hero.subtitle', 'Комплексный подход к вашему здоровью, включающий профилактику и поддержание здоровья')}
             </p>
             
-            <div className="flex flex-row gap-2 mb-8 justify-center lg:justify-start">
+            <div className="flex flex-row gap-4 mb-8 justify-center lg:justify-start">
               <Button 
                 onClick={() => scrollToSection('contacts')}
-                className="bg-[#2D1B69] hover:bg-[#3F2A7D] text-white px-4 py-1 rounded-full font-semibold shadow-md flex items-center text-sm"
+                className="bg-[#2D1B69] hover:bg-[#3F2A7D] text-white px-6 py-3 rounded-full font-semibold shadow-md flex items-center"
               >
-                {t('hero.clinicsButton')}
+                {t('hero.clinicsButton', 'Найти клинику')}
                 <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
-            </div>
-
-            {/* Search Box */}
-            <div className="bg-white rounded-2xl p-6 shadow-xl max-w-md">
-              <h3 className="text-[#2D1B69] mb-4">{t('hero.searchTitle')}</h3>
-              <div className="relative">
-                <Input 
-                  placeholder={t('hero.searchPlaceholder')}
-                  className="pr-12 h-12 rounded-lg"
-                />
-                <button className="ml-1 bg-[#2D1B69] hover:bg-[#3F2A7D] rounded-full w-8 h-8 flex items-center justify-center transition-colors">
-                  <Search className="w-4 h-4 text-white" />
-                </button>
-              </div>
+              <Button 
+                onClick={() => scrollToSection('services')}
+                variant="outline"
+                className="border-[#2D1B69] text-[#2D1B69] hover:bg-[#2D1B69] hover:text-white px-6 py-3 rounded-full font-semibold"
+              >
+                {t('hero.servicesButton', 'Услуги')}
+              </Button>
             </div>
 
             {/* Stats */}
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-1">4500+</div>
-                <div className="text-sm text-[#718096]">{t('hero.stats.patients')}</div>
+                <div className="text-sm text-[#718096]">{t('hero.stats.patients', 'Пациентов')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-1">200</div>
-                <div className="text-sm text-[#718096]">{t('hero.stats.doctors')}</div>
+                <div className="text-sm text-[#718096]">{t('hero.stats.doctors', 'Врачей')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-1">500+</div>
-                <div className="text-sm text-[#718096]">{t('hero.stats.awards')}</div>
+                <div className="text-sm text-[#718096]">{t('hero.stats.awards', 'Наград')}</div>
               </div>
               <div>
                 <div className="text-3xl font-bold text-red-600 mb-1">20+</div>
-                <div className="text-sm text-[#718096]">{t('hero.stats.experience')}</div>
+                <div className="text-sm text-[#718096]">{t('hero.stats.experience', 'Лет опыта')}</div>
               </div>
             </div>
           </div>
@@ -80,7 +71,7 @@ export function Hero() {
           {/* Right Content - Team Image */}
           <div className="hidden lg:block">
             <img
-              src="https://images.unsplash.com/photo-1589104759909-e355f8999f7e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwdGVhbSUyMGRvY3RvcnMlMjBob3NwaXRhbCUyMGdyb3VwfGVufDF8fHx8MTc2MTAyNjAzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src="https://billingfoxtech.com/wp-content/uploads/2024/08/BillingFox-Technologies.png" // Replace with the actual image URL from your upload
               alt={t('hero.title')}
               className="relative z-10 w-full h-auto object-contain max-h-[500px]"
             />
@@ -88,10 +79,10 @@ export function Hero() {
         </div>
       </div>
 
-      {/* White circle time indicator in top right */}
-      <div className="absolute top-8 right-8 bg-white rounded-full px-6 py-3 shadow-lg hidden lg:block">
-        <div className="text-[#2D1B69] font-semibold">24/7</div>
-        <div className="text-xs text-[#718096]">{t('hero.online')}</div>
+      {/* Language selector in top right */}
+      <div className="absolute top-8 right-8 flex space-x-2">
+        <button className="bg-white rounded-full px-3 py-1 text-[#2D1B69] font-semibold">English</button>
+        <button className="bg-white rounded-full px-3 py-1 text-[#2D1B69] font-semibold">العربية</button>
       </div>
     </section>
   );

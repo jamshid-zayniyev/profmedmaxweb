@@ -14,7 +14,7 @@ export function Doctors() {
             'Dr. Elena Ivanova',
       specialty: t('doctors.specialties.cardiologist'),
       experience: `15 ${t('doctors.experience')}`,
-      image: 'https://images.unsplash.com/photo-1719610894782-7b376085e200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjA5Mzk1MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://sc04.alicdn.com/kf/H3c3e2bf4926247269a8f4c4cdd73cadfY.jpg_350x350.jpg',
       description: t('doctors.descriptions.cardiologist'),
       achievements: t('doctors.achievements.cardiologist', { returnObjects: true }),
       color: 'from-orange-500 to-orange-600'
@@ -27,7 +27,7 @@ export function Doctors() {
             'Dr. Alexander Petrov',
       specialty: t('doctors.specialties.orthopedicSurgeon'),
       experience: `18 ${t('doctors.experience')}`,
-      image: 'https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYwOTY5ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://images.jdmagicbox.com/quickquotes/images_main/internet-website-developers-for-doctor-2224391753-nuza5ghs.jpg',
       description: t('doctors.descriptions.orthopedicSurgeon'),
       achievements: t('doctors.achievements.orthopedicSurgeon', { returnObjects: true }),
       color: 'from-orange-500 to-orange-600'
@@ -40,7 +40,7 @@ export function Doctors() {
             'Dr. Maria Smirnova',
       specialty: t('doctors.specialties.pediatrician'),
       experience: `12 ${t('doctors.experience')}`,
-      image: 'https://images.unsplash.com/photo-1567745566980-4378a3db17fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZWRpYXRyaWNpYW4lMjBkb2N0b3J8ZW58MXx8fHwxNzYwOTIwODc5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://i.pinimg.com/170x/7f/79/55/7f7955a81f8a0a76fb3ebbdbed63477c.jpg',
       description: t('doctors.descriptions.pediatrician'),
       achievements: t('doctors.achievements.pediatrician', { returnObjects: true }),
       color: 'from-yellow-500 to-yellow-600'
@@ -53,7 +53,7 @@ export function Doctors() {
             'Dr. Dmitry Kozlov',
       specialty: t('doctors.specialties.neurologist'),
       experience: `20 ${t('doctors.experience')}`,
-      image: 'https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYwOTY5ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://estetica.istanbul/wp-content/uploads/2024/04/successful-surgeons-for-treatment-of-hair-transplant-in-turkey.png',
       description: t('doctors.descriptions.neurologist'),
       achievements: t('doctors.achievements.neurologist', { returnObjects: true }),
       color: 'from-purple-600 to-indigo-700'
@@ -66,7 +66,7 @@ export function Doctors() {
             'Dr. Anna Volkova',
       specialty: t('doctors.specialties.therapist'),
       experience: `10 ${t('doctors.experience')}`,
-      image: 'https://images.unsplash.com/photo-1719610894782-7b376085e200?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmZW1hbGUlMjBkb2N0b3IlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NjA5Mzk1MDZ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://img.redro.pl/plakaty/young-woman-doctor-dressed-white-medical-uniform-400-241268608.jpg',
       description: t('doctors.descriptions.therapist'),
       achievements: t('doctors.achievements.therapist', { returnObjects: true }),
       color: 'from-teal-500 to-teal-600'
@@ -74,12 +74,10 @@ export function Doctors() {
     {
       name: t('language') === 'ru' ? 'Доктор Сергей Николаев' : 
             t('language') === 'uz' ? 'Doktor Sergey Nikolayev' :
-            t('language') === 'ar' ? 'الدكتور سيرجي نيكولايف' :
-            t('language') === 'zh' ? '谢尔盖·尼古拉耶夫医生' :
             'Dr. Sergey Nikolayev',
       specialty: t('doctors.specialties.urologist'),
       experience: `14 ${t('doctors.experience')}`,
-      image: 'https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYWxlJTIwZG9jdG9yJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzYwOTY5ODY1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral',
+      image: 'https://st4.depositphotos.com/3776273/39461/i/450/depositphotos_394613312-stock-photo-covid-19-preventing-virus-healthcare.jpg',
       description: t('doctors.descriptions.urologist'),
       achievements: t('doctors.achievements.urologist', { returnObjects: true }),
       color: 'from-orange-500 to-orange-600'
@@ -111,7 +109,7 @@ export function Doctors() {
               </div>
               
               {/* Info Section with Gradient Background */}
-              <div className={`relative bg-gradient-to-br ${doctor.color} p-6 text-white`}>
+              <div className={`relative bg-gradient-to-br bg-[#231864] bg-repeat p-6 text-white`}>
                 <h3 className="text-white mb-2">{doctor.name}</h3>
                 <div className={`inline-block px-3 py-1 rounded-full mb-3 bg-gradient-to-r ${doctor.color} text-white text-sm font-semibold`}>
                   {doctor.specialty}
@@ -129,7 +127,7 @@ export function Doctors() {
                 <div className="space-y-2">
                   {doctor.achievements.map((achievement, idx) => (
                     <div key={idx} className="flex items-start space-x-2">
-                      <Star className="w-4 h-4 text-yellow-300 fill-yellow-300 flex-shrink-0 mt-0.5" />
+                      <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
                       <span className="text-sm text-white/90">{achievement}</span>
                     </div>
                   ))}

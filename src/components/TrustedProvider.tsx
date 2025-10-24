@@ -15,8 +15,8 @@ export function TrustedProvider() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-100 via-purple-50 to-blue-50">
-      <div className="container mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <div className="container mx-auto px-4 ">
+        <div className="grid lg:grid-cols-2 gap-12 items-center bg-gray-400">
           {/* Left Content */}
           <div>
             <h2 className="text-[#2D3748] mb-6 leading-tight">
@@ -64,7 +64,7 @@ export function TrustedProvider() {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjB0ZWFtJTIwaG9zcGl0YWwlMjBwcm9mZXNzaW9uYWx8ZW58MXx8fHwxNzYxMDI2NTI1fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+                src="https://t4.ftcdn.net/jpg/01/53/86/11/360_F_153861155_D3fK58gPWgsMYd6HvzMJMPTOT8j480dB.jpg"
                 alt={t('trusted.title')}
                 className="w-full h-[600px] object-cover"
               />
