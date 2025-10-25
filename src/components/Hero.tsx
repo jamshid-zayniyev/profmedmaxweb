@@ -24,7 +24,6 @@ export function Hero() {
       try {
         setLoading(true);
         const data = await getAllHeroData();
-        // Since the API returns an array, take the first item
         if (data && data.length > 0) {
           setHeroData(data[0]);
         }

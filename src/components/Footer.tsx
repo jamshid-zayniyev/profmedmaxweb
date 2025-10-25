@@ -1,32 +1,59 @@
-
 import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { getSocialMedia } from '../services/social-media/socialService';
+import { getLocation } from '../services/location/locationService';
+import { getPhone } from '../services/phone/phoneService';
+import { getEmail } from '../services/email/emailService';
 import type { MediaTypes } from '../services/social-media/social.types';
+import type { LocationTypes } from '../services/location/location.types';
+import type { PhoneTypes } from '../services/phone/phone.types';
+import type { EmailTypes } from '../services/email/email.types';
 
 export function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
   const [socialMedia, setSocialMedia] = useState<MediaTypes[]>([]);
+  const [location, setLocation] = useState<LocationTypes | null>(null);
+  const [phones, setPhones] = useState<PhoneTypes[]>([]);
+  const [emails, setEmails] = useState<EmailTypes[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchSocialMedia = async () => {
+    const fetchFooterData = async () => {
       try {
         setLoading(true);
-        const data = await getSocialMedia();
-        setSocialMedia(data);
+
+        // Fetch all data in parallel
+        const [socialData, locationData, phoneData, emailData] = await Promise.all([
+          getSocialMedia(),
+          getLocation(),
+          getPhone(),
+          getEmail(),
+        ]);
+
+        setSocialMedia(socialData);
+
+        // Assuming APIs return arrays, take the first item for single-value data
+        if (locationData && locationData.length > 0) {
+          setLocation(locationData[0]);
+        }
+        if (phoneData && phoneData.length > 0) {
+          setPhones(phoneData);
+        }
+        if (emailData && emailData.length > 0) {
+          setEmails(emailData);
+        }
       } catch (err) {
-        setError('Failed to load social media links');
-        console.error('Error fetching social media:', err);
+        setError('Failed to load footer information');
+        console.error('Error fetching footer data:', err);
       } finally {
         setLoading(false);
       }
     };
 
-    fetchSocialMedia();
+    fetchFooterData();
   }, []);
 
   // Function to get the appropriate icon for each social media platform
@@ -42,7 +69,7 @@ export function Footer() {
     return <div className="w-5 h-5 bg-white rounded-full"></div>;
   };
 
-  // Function to get image URL for social media - FIXED VERSION
+  // Function to get image URL for social media
   const getImageUrl = (imagePath: string) => {
     if (!imagePath) return null;
     
@@ -57,6 +84,39 @@ export function Footer() {
     }
     
     return imagePath;
+  };
+
+  // Function to get display address
+  const getDisplayAddress = () => {
+    if (loading) {
+      return t('footer.contact.address');
+    }
+    if (location) {
+      return location.fullAddress || `${location.street} ${location.house}, ${location.region}`;
+    }
+    return t('footer.contact.address');
+  };
+
+  // Function to get display phone numbers
+  const getDisplayPhones = () => {
+    if (loading) {
+      return t('footer.contact.phone');
+    }
+    if (phones.length > 0) {
+      return phones.slice(0, 2).map(phone => phone.number).join(', ');
+    }
+    return t('footer.contact.phone');
+  };
+
+  // Function to get display email
+  const getDisplayEmail = () => {
+    if (loading) {
+      return t('footer.contact.email');
+    }
+    if (emails.length > 0) {
+      return emails[0].email; // Use first email as primary
+    }
+    return t('footer.contact.email');
   };
 
   return (
@@ -180,15 +240,41 @@ export function Footer() {
             <ul className="space-y-3 text-sm text-white/80">
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>{t('footer.contact.address')}</span>
+                <span>{getDisplayAddress()}</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Phone className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>{t('footer.contact.phone')}</span>
+                <span>
+                  {phones.length > 0 ? (
+                    phones.slice(0, 2).map((phone, index) => (
+                      <span key={phone.id}>
+                        <a href={`tel:${phone.number}`} className="hover:text-white">
+                          {phone.number}
+                        </a>
+                        {index < phones.length - 1 && ', '}
+                      </span>
+                    ))
+                  ) : (
+                    getDisplayPhones()
+                  )}
+                </span>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="w-5 h-5 flex-shrink-0 mt-0.5" />
-                <span>{t('footer.contact.email')}</span>
+                <span>
+                  {emails.length > 0 ? (
+                    emails.map((email, index) => (
+                      <span key={email.id}>
+                        <a href={`mailto:${email.email}`} className="hover:text-white">
+                          {email.email}
+                        </a>
+                        {index < emails.length - 1 && ', '}
+                      </span>
+                    ))
+                  ) : (
+                    getDisplayEmail()
+                  )}
+                </span>
               </li>
             </ul>
           </div>
