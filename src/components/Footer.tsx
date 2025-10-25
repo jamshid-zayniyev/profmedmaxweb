@@ -1,9 +1,63 @@
+
+import { useState, useEffect } from 'react';
 import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { getSocialMedia } from '../services/social-media/socialService';
+import type { MediaTypes } from '../services/social-media/social.types';
 
 export function Footer() {
   const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
+  const [socialMedia, setSocialMedia] = useState<MediaTypes[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchSocialMedia = async () => {
+      try {
+        setLoading(true);
+        const data = await getSocialMedia();
+        setSocialMedia(data);
+      } catch (err) {
+        setError('Failed to load social media links');
+        console.error('Error fetching social media:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSocialMedia();
+  }, []);
+
+  // Function to get the appropriate icon for each social media platform
+  const getSocialIcon = (name: string) => {
+    const lowerName = name.toLowerCase();
+    
+    if (lowerName.includes('facebook')) return <Facebook className="w-5 h-5" />;
+    if (lowerName.includes('instagram')) return <Instagram className="w-5 h-5" />;
+    if (lowerName.includes('twitter') || lowerName.includes('x')) return <Twitter className="w-5 h-5" />;
+    if (lowerName.includes('linkedin')) return <Linkedin className="w-5 h-5" />;
+    
+    // Default icon for unknown platforms
+    return <div className="w-5 h-5 bg-white rounded-full"></div>;
+  };
+
+  // Function to get image URL for social media - FIXED VERSION
+  const getImageUrl = (imagePath: string) => {
+    if (!imagePath) return null;
+    
+    // If it's already a full URL, use it directly
+    if (imagePath.startsWith('http')) {
+      return imagePath;
+    }
+    
+    // If it's a relative path starting with /, use it as is (assuming it's served by your backend)
+    if (imagePath.startsWith('/')) {
+      return imagePath;
+    }
+    
+    return imagePath;
+  };
 
   return (
     <footer className="bg-[#2D1B69] text-white pt-16 pb-8">
@@ -16,18 +70,83 @@ export function Footer() {
               {t('footer.about.description')}
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
-                <Facebook className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
-                <Instagram className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
-                <Linkedin className="w-5 h-5" />
-              </a>
+              {loading ? (
+                // Loading skeleton for social media icons
+                [...Array(4)].map((_, index) => (
+                  <div 
+                    key={index}
+                    className="w-10 h-10 bg-white/10 rounded-full animate-pulse"
+                  ></div>
+                ))
+              ) : error ? (
+                // Fallback to default social media icons if API fails
+                <>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Twitter className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                </>
+              ) : socialMedia.length > 0 ? (
+                // Render social media links from API
+                socialMedia.map((social) => {
+                  const imageUrl = getImageUrl(social.image);
+                  
+                  return (
+                    <a 
+                      key={social.id}
+                      href={social.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors group"
+                      title={social.name}
+                    >
+                      {imageUrl ? (
+                        <img 
+                          src={imageUrl} 
+                          alt={social.name}
+                          className="w-5 h-5 object-contain group-hover:scale-110 transition-transform"
+                          onError={(e) => {
+                            // If image fails to load, fall back to icon
+                            const parent = e.currentTarget.parentElement;
+                            if (parent) {
+                              // Remove the img element
+                              parent.removeChild(e.currentTarget);
+                              // Add the icon
+                              parent.appendChild(getSocialIcon(social.name));
+                            }
+                          }}
+                        />
+                      ) : (
+                        getSocialIcon(social.name)
+                      )}
+                    </a>
+                  );
+                })
+              ) : (
+                // Fallback if no social media data
+                <>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Facebook className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Instagram className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Twitter className="w-5 h-5" />
+                  </a>
+                  <a href="#" className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-[#5B4E99] transition-colors">
+                    <Linkedin className="w-5 h-5" />
+                  </a>
+                </>
+              )}
             </div>
           </div>
 

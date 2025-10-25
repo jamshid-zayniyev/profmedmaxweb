@@ -1,15 +1,15 @@
-import { Toaster } from './components/ui/sonner';
-import { Header } from './components/Header';
-import { Hero } from './components/Hero';
-import { DepartmentCategory } from './components/DepartmentCategory';
-import { MedicalServices } from './components/MedicalServices';
-import { TrustedProvider } from './components/TrustedProvider';
-import { Statistics } from './components/Statistics'; // Add this import
-import { Doctors } from './components/Doctors';
-import { About } from './components/About';
-import { Reviews } from './components/Reviews';
-import { Contacts } from './components/Contacts';
-import { Footer } from './components/Footer';
+import { Toaster } from "./components/ui/sonner";
+import { Header } from "./components/Header";
+import { Hero } from "./components/Hero";
+import { DepartmentCategory } from "./components/DepartmentCategory";
+import { MedicalServices } from "./components/MedicalServices";
+import { TrustedProvider } from "./components/TrustedProvider";
+import { Statistics } from "./components/Statistics"; // Add this import
+import { Doctors } from "./components/Doctors";
+import { About } from "./components/About";
+import { Reviews } from "./components/Reviews";
+import { Contacts } from "./components/Contacts";
+import { Footer } from "./components/Footer";
 
 export default function App() {
   return (
@@ -20,12 +20,22 @@ export default function App() {
       <MedicalServices />
       <TrustedProvider />
       <Doctors />
-      <Statistics /> 
+      <Statistics />
       <About />
       <Reviews />
       <Contacts />
       <Footer />
-      <Toaster position="top-right" />
+      <Toaster
+        position="bottom-center"
+        theme="light"
+        toastOptions={{
+          style: {
+            background: "white",
+            color: "black",
+            border: "1px solid #e5e7eb",
+          },
+        }}
+      />
     </div>
   );
 }
