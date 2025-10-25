@@ -100,14 +100,20 @@ export function Doctors() {
     if (
       imagePath.startsWith("/media/") ||
       imagePath.startsWith("/static/") ||
-      imagePath.startsWith("/uploads/")
+      imagePath.startsWith("/uploads/") ||
+      imagePath.includes("placeholder") ||
+      imagePath.includes("default")
     ) {
       return false;
     }
 
     // Check if it's a valid URL
     try {
-      new URL(imagePath);
+      const url = new URL(imagePath);
+      // Also check if it's a data URL (base64) which might be tiny
+      if (url.protocol === 'data:') {
+        return imagePath.length > 1000; // Basic check for reasonable data URL size
+      }
       return true;
     } catch {
       return false;
@@ -209,16 +215,23 @@ export function Doctors() {
             return (
               <Card
                 key={doctor.id}
-                className="border-0 shadow-lg overflow-hidden rounded-2xl hover:shadow-2xl transition-all"
+                className="border-0 shadow-lg overflow-hidden rounded-2xl hover:shadow-2xl transition-all flex flex-col h-full"
               >
-                {/* Image Section */}
-                <div className="relative h-64 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+                {/* Image Section - Fixed height */}
+                <div className="relative h-60 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center flex-shrink-0">
                   {shouldShowImage ? (
                     <img
                       src={doctor.image!}
                       alt={localizedName}
                       className="w-full h-full object-cover"
                       onError={() => handleImageError(doctor.id)}
+                      onLoad={(e) => {
+                        // Check if image loaded successfully and has reasonable dimensions
+                        const img = e.target as HTMLImageElement;
+                        if (img.naturalWidth < 50 || img.naturalHeight < 50) {
+                          handleImageError(doctor.id);
+                        }
+                      }}
                       loading="lazy"
                     />
                   ) : (
@@ -229,48 +242,71 @@ export function Doctors() {
                   )}
                 </div>
 
-                {/* Info Section */}
-                <div className="relative bg-[#231864] p-6 text-white">
-                  <h3 className="text-white mb-2">{localizedName}</h3>
-                  <div
-                    className={`inline-block px-3 py-1 rounded-full mb-3 bg-gradient-to-r ${getDoctorColor(
-                      index
-                    )} text-white text-sm font-semibold`}
-                  >
-                    {localizedProfession || localizedSpeciality}
-                  </div>
-                  <div className="flex items-center space-x-2 text-white/90 mb-4">
-                    <Clock className="w-4 h-4" />
-                    <span className="text-sm">
-                      {doctor.experience} {t("doctors.experience")}
-                    </span>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
-                    <p className="text-white/90 text-sm mb-4 leading-relaxed">
-                      {doctor.operations}+ {t("operations")}
-                    </p>
-                  </div>
-                  <div className="flex items-start space-x-2">
-                    <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
-                    <p className="text-white/90 text-sm mb-4 leading-relaxed">
-                      {localizedAbout}
-                    </p>
-                  </div>
+                {/* Info Section - Flexible height with consistent blue background */}
+                <div className="relative bg-[#231864] p-6 text-white flex-grow flex flex-col">
+                  <div className="flex-grow flex flex-col">
+                    <h3 className="text-white mb-2">{localizedName}</h3>
+                    <div
+                      className={`inline-block px-3 py-1 rounded-full mb-4 bg-gradient-to-r ${getDoctorColor(
+                        index
+                      )} text-white text-sm font-semibold flex-shrink-0`}
+                    >
+                      {localizedProfession}
+                    </div>
+                    <div
+                      className={`inline-block py-1 rounded-full mb-4 bg-gradient-to-r text-white text-sm font-semibold flex-shrink-0`}
+                    >
+                      {localizedSpeciality}
+                    </div>
 
-                  {/* Achievements with Stars */}
-                  {achievementsArray.length > 0 && (
-                    <div className="space-y-2">
-                      {achievementsArray.slice(0, 3).map((achievement, idx) => (
-                        <div key={idx} className="flex items-start space-x-2">
-                          <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
-                          <span className="text-sm text-white/90">
-                            {achievement}
+                    <div className="space-y-3 flex-grow">
+                      {doctor.experience > 0 && (
+                        <div className="flex items-center space-x-2 text-white/90">
+                          <Clock className="w-4 h-4 flex-shrink-0" />
+                          <span className="text-sm">
+                            {doctor.experience} {t("doctors.experience")}
                           </span>
                         </div>
-                      ))}
+                      )}
+
+                      {doctor.operations > 0 && (
+                        <div className="flex items-start space-x-2">
+                          <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
+                          <p className="text-white/90 text-sm leading-relaxed">
+                            {doctor.operations}+ {t("operations")}
+                          </p>
+                        </div>
+                      )}
+
+                      {localizedAbout && localizedAbout.length > 0 && (
+                        <div className="flex items-start space-x-2">
+                          <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
+                          <p className="text-white/90 text-sm leading-relaxed">
+                            {localizedAbout}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Achievements with Stars */}
+                      {achievementsArray.length > 0 && (
+                        <div className="space-y-2">
+                          {achievementsArray
+                            .slice(0, 3)
+                            .map((achievement, idx) => (
+                              <div
+                                key={idx}
+                                className="flex items-start space-x-2"
+                              >
+                                <Star className="w-4 h-4 text-yellow-300 fill-blue-300 flex-shrink-0 mt-0.5" />
+                                <span className="text-sm text-white/90">
+                                  {achievement}
+                                </span>
+                              </div>
+                            ))}
+                        </div>
+                      )}
                     </div>
-                  )}
+                  </div>
                 </div>
               </Card>
             );
