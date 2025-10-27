@@ -3,8 +3,12 @@ import { ArrowRight, Search } from 'lucide-react';
 import { Input } from './ui/input';
 import { useTranslation } from 'react-i18next';
 import { useEffect, useState } from 'react';
-import { getAllHeroData } from '../services/heroData/heroDataService'; // Adjust the import path as needed
-import type { HeroTypes } from '../services/heroData/heroData.types'; // Adjust the import path as needed
+import { getAllHeroData } from '../services/heroData/heroDataService';
+import type { HeroTypes } from '../services/heroData/heroData.types';
+import Lottie from 'lottie-react';
+
+// ✅ Import the animation JSON file directly
+import doctorAnimationData from '../assets/animations/Doctor.json';
 
 export function Hero() {
   const { t } = useTranslation();
@@ -38,18 +42,29 @@ export function Hero() {
     fetchHeroData();
   }, []);
 
-  // Show loading state
   if (loading) {
     return (
       <section className="relative bg-gradient-to-br from-blue-100 via-purple-100 to-purple-200 py-20 overflow-hidden min-h-[600px] flex items-center justify-center">
         <div className="text-center">
-          <div className="text-[#2D1B69] text-lg">Loading...</div>
+          <div className="flex flex-col items-center justify-center">
+            {/* ✅ Use the Lottie animation loaded from JSON */}
+            <div className="w-48 h-48 mb-4">
+              <Lottie 
+                animationData={doctorAnimationData}
+                loop={true}
+                autoplay={true}
+              />
+            </div>
+            {/* ✅ Place the loader text below the animation */}
+            <div className="text-[#2D1B69] text-lg font-semibold mb-2">
+              PROF<span className='text-red-500'>MED</span>MAX
+            </div>
+          </div>
         </div>
       </section>
     );
   }
 
-  // Show error state
   if (error) {
     return (
       <section className="relative bg-gradient-to-br from-blue-100 via-purple-100 to-purple-200 py-20 overflow-hidden min-h-[600px] flex items-center justify-center">
