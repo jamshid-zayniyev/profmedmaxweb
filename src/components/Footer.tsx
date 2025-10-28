@@ -172,7 +172,7 @@ export function Footer() {
                         <img 
                           src={imageUrl} 
                           alt={social.name}
-                          className="w-5 h-5 object-contain group-hover:scale-110 transition-transform"
+                          className="w-8 h-8 object-contain group-hover:scale-110 transition-transform rounded-[50%]"
                           onError={(e) => {
                             // If image fails to load, fall back to icon
                             const parent = e.currentTarget.parentElement;

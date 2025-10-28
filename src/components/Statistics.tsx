@@ -96,7 +96,7 @@ export const Statistics: React.FC = () => {
                 className="text-center p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
               >
                 <div className="text-4xl mb-4">{stat.icon}</div>
-                <div className="text-5xl font-bold text-blue-600 mb-2">
+                <div className="text-lg md:text-5xl font-bold text-blue-600 mb-2">
                   {stat.number}
                 </div>
                 <div className="text-lg font-semibold text-gray-700">

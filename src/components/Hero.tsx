@@ -83,7 +83,7 @@ export function Hero() {
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="text-center lg:text-left">
-            <h1 className="text-[#2D1B69] text-4xl lg:text-5xl font-bold mb-6 leading-tight">
+            <h1 className="text-[#2D1B69] text-3xl md:text-4xl lg:text-5xl font-bold mb-6 leading-tight">
               {t('hero.title')}
             </h1>
             
@@ -112,25 +112,25 @@ export function Hero() {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
               <div>
-                <div className="text-3xl font-bold text-red-600 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
                   {heroData?.happy_patients}+
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.patients')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-red-600 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
                   {heroData?.wards}
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.doctors')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-red-600 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
                   {heroData?.awards}+
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.awards')}</div>
               </div>
               <div>
-                <div className="text-3xl font-bold text-red-600 mb-1">
+                <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
                   {heroData?.ambulances}+
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.experience')}</div>

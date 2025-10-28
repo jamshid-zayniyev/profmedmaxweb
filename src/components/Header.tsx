@@ -53,6 +53,8 @@ export function Header() {
   const handleLanguageChange = async (langCode: string) => {
     try {
       await i18n.changeLanguage(langCode);
+      // Save selected language to localStorage
+      localStorage.setItem('selected-language', langCode);
       setDropdownOpen(false);
     } catch (error) {
       console.error('Error changing language:', error);

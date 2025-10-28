@@ -245,7 +245,7 @@ export function Doctors() {
                 {/* Info Section - Flexible height with consistent blue background */}
                 <div className="relative bg-[#231864] p-6 text-white flex-grow flex flex-col">
                   <div className="flex-grow flex flex-col">
-                    <h3 className="text-white mb-2">{localizedName}</h3>
+                    <h3 className="text-xl md:text-2xl text-white mb-2">{localizedName}</h3>
                     <div
                       className={`inline-block px-3 py-1 rounded-full mb-4 bg-gradient-to-r ${getDoctorColor(
                         index

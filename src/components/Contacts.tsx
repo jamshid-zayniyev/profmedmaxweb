@@ -75,16 +75,16 @@ export function Contacts() {
     e.preventDefault();
 
     if (!formData.name || !formData.email || !formData.phone) {
-  toast.error(t('contacts.toast.error'), {
-    position: 'bottom-center',
-    style: {
-      backgroundColor: 'white',
-      color: 'black',
-      border: '1px solid #e5e7eb'
+      toast.error(t("contacts.toast.error"), {
+        position: "bottom-center",
+        style: {
+          backgroundColor: "white",
+          color: "black",
+          border: "1px solid #e5e7eb",
+        },
+      });
+      return;
     }
-  });
-  return;
-}
 
     setSubmitting(true);
 
@@ -128,9 +128,9 @@ export function Contacts() {
   };
 
   // Generate Google Maps URL from coordinates
-  const getMapUrl = () => {
-    if (location?.latitude && location?.longitude) {
-      return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${location.latitude}!2d${location.longitude}!3d${location.latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z${location.latitude}%2C${location.longitude}!5e0!3m2!1sen!2sru!4v1234567890123!5m2!1sen!2sru`;
+  const getMapUrl = (latitude = 0, longitude = 0) => {
+    if (latitude !== undefined && longitude !== undefined) {
+      return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${latitude}!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z${latitude}%2C${longitude}!5e0!3m2!1sen!2sru!4v1234567890123!5m2!1sen!2sru`;
     }
 
     // Fallback to default map if no coordinates

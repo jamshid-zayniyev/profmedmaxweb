@@ -46,15 +46,15 @@ export function TrustedProvider() {
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-8">
               <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">20+</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">20+</div>
                 <div className="text-sm text-[#718096]">{t('trusted.stats.years')}</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">50+</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">50+</div>
                 <div className="text-sm text-[#718096]">{t('trusted.stats.specialists')}</div>
               </div>
               <div>
-                <div className="text-4xl font-bold text-blue-600 mb-2">10k+</div>
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">10k+</div>
                 <div className="text-sm text-[#718096]">{t('trusted.stats.patients')}</div>
               </div>
             </div>

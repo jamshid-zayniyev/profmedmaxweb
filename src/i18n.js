@@ -26,18 +26,27 @@ const resources = {
   }
 };
 
+// Get saved language from localStorage or use default
+const getSavedLanguage = () => {
+  const savedLanguage = localStorage.getItem('selected-language');
+  if (savedLanguage && resources[savedLanguage]) {
+    return savedLanguage;
+  }
+  return 'ru'; // default language
+};
+
 i18n
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'ru', // default language
+    lng: getSavedLanguage(), // Use saved language or default
     fallbackLng: 'ru',
     debug: process.env.NODE_ENV === 'development',
     interpolation: {
       escapeValue: false,
     },
     react: {
-      useSuspense: false, // This prevents suspense issues
+      useSuspense: false,
     }
   });
 
