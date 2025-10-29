@@ -1,7 +1,7 @@
 import { CheckCircle } from 'lucide-react';
 import { Button } from './ui/button';
 import { useTranslation } from 'react-i18next';
-
+import about from '../assets/images/about.jpeg';
 export function About() {
   const { t } = useTranslation();
 
@@ -22,7 +22,7 @@ export function About() {
           <div className="relative">
             <div className="absolute -top-4 -left-4 w-full h-full bg-[#5B4E99] rounded-2xl opacity-10"></div>
             <img
-              src="https://images.unsplash.com/photo-1758691461935-202e2ef6b69f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwY29uc3VsdGF0aW9uJTIwZG9jdG9yJTIwcGF0aWVudHxlbnwxfHx8fDE3NjEwMjUzNjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+              src = {about}
               alt={t('about.title')}
               className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
             />

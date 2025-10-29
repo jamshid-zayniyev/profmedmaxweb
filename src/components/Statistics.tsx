@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getAllFooterdata } from '../services/footerData/footerDataService'; // Adjust import path as needed
 import type { FooterTypes } from '../services/footerData/footerData.types'; // Adjust import path as needed
-
 export const Statistics: React.FC = () => {
   const { t } = useTranslation();
   const [footerData, setFooterData] = useState<FooterTypes | null>(null);

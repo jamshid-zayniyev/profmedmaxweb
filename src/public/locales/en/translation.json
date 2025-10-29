@@ -39,8 +39,8 @@
   "services": {
     "mainTitle": "World-class medical services for you and your loved ones",
     "ambulance": {
-      "title": "Ambulance",
-      "description": "24/7 emergency service ready to provide support in critical situations. Equipped with modern equipment for working with injuries, cardiac and other emergency conditions."
+      "title": "ENT device",
+      "description": "An ENT device is a multifunctional medical device used to examine, wash, aspirate, visualize (endoscopy), and perform certain procedures on the organs of the ear, nose, and throat."
     },
     "laboratory": {
       "title": "Laboratory Services",

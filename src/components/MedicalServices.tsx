@@ -1,6 +1,8 @@
 import { Activity, Stethoscope, FlaskConical, Radio, Pill } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-
+import service1 from '../assets/images/service1.jpeg';
+import service2 from '../assets/images/service2.jpeg';
+import service3 from '../assets/images/service3.jpeg';
 export function MedicalServices() {
   const { t } = useTranslation();
 
@@ -9,19 +11,19 @@ export function MedicalServices() {
       icon: Activity,
       title: t('services.ambulance.title'),
       description: t('services.ambulance.description'),
-      image: 'https://images.unsplash.com/photo-1721411480070-fcb558776d54?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbWJ1bGFuY2UlMjBlbWVyZ2VuY3klMjBtZWRpY2FsfGVufDF8fHx8MTc2MTAyNjIyMXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: service3
     },
     {
       icon: FlaskConical,
       title: t('services.laboratory.title'),
       description: t('services.laboratory.description'),
-      image: 'https://images.unsplash.com/photo-1576669801838-1b1c52121e6a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtZWRpY2FsJTIwbGFib3JhdG9yeSUyMHRlc3R8ZW58MXx8fHwxNzYwOTI4NDkzfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: service1
     },
     {
       icon: Radio,
       title: t('services.radiology.title'),
       description: t('services.radiology.description'),
-      image: 'https://images.unsplash.com/photo-1758691461957-13aff0c37c6f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyYWRpb2xvZ3klMjB4cmF5JTIwc2NhbnxlbnwxfHx8fDE3NjEwMjYyMjJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral'
+      image: service2
     },
     {
       icon: Pill,

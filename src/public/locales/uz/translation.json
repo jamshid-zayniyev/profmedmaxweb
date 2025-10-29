@@ -39,8 +39,8 @@
   "services": {
     "mainTitle": "Siz va yaqinlaringiz uchun dunyo standartidagi tibbiy xizmatlar",
     "ambulance": {
-      "title": "Tez yordam",
-      "description": "Kritik vaziyatlarda yordam ko'rsatishga tayyor bo'lgan 24 soatlik favqulodda yordam xizmati. Shikastlanishlar, yurak-qon tomir va boshqa shoshilinch holatlar bilan ishlash uchun zamonaviy uskunalar bilan jihozlangan."
+      "title": "LOR apparati",
+      "description": "LOR apparati – bu quloq, burun va tomoq organlarini tekshirish, yuvish, aspiratsiya qilish, ko‘rish (endoskopiya) va ayrim muolajalarni bajarish uchun ishlatiladigan ko‘p funksiyali tibbiy uskuna."
     },
     "laboratory": {
       "title": "Laboratoriya xizmatlari",
