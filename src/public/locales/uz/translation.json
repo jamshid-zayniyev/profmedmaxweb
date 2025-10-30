@@ -47,8 +47,8 @@
       "description": "Aniq va o'z vaqtida tibbiy diagnostika qilish uchun kompleks laboratoriya tadqiqotlari. Tashxis qo'yish va davolashni kuzatish uchun qon, siydik va boshqa tadqiqotlar."
     },
     "radiology": {
-      "title": "Radiologiya va diagnostika",
-      "description": "Rentgen, KT, MRT va ultratovush tekshiruvi kabi ilg'or tibbiy diagnostik tasvirlash usullari. Aniq diagnostika va bemorlarning qulayligi uchun zamonaviy uskunalar."
+      "title": "Tez yordam",
+      "description": "Kritik vaziyatlarda yordam ko'rsatishga tayyor bo'lgan 24 soatlik favqulodda yordam xizmati. Shikastlanishlar, yurak-qon tomir va boshqa shoshilinch holatlar bilan ishlash uchun zamonaviy uskunalar bilan jihozlangan."
     },
     "pharmacy": {
       "title": "Dorixona",
