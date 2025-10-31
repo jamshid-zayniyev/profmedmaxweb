@@ -23,6 +23,25 @@ export function Hero() {
     }
   };
 
+  // Function to format large numbers with K and M suffixes
+  const formatLargeNumber = (value: string | number | undefined): string => {
+    if (!value) return '0';
+    
+    const num = typeof value === 'string' ? parseFloat(value) : value;
+    
+    if (isNaN(num)) return '0';
+    
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    }
+    
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    }
+    
+    return num.toString();
+  };
+
   useEffect(() => {
     const fetchHeroData = async () => {
       try {
@@ -113,25 +132,25 @@ export function Hero() {
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
-                  {heroData?.happy_patients}+
+                  {formatLargeNumber(heroData?.happy_patients)}
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.patients')}</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
-                  {heroData?.wards}
+                  {formatLargeNumber(heroData?.wards)}
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.doctors')}</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
-                  {heroData?.awards}+
+                  {formatLargeNumber(heroData?.awards)}
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.awards')}</div>
               </div>
               <div>
                 <div className="text-2xl md:text-3xl font-bold text-red-600 mb-1">
-                  {heroData?.ambulances}+
+                  {formatLargeNumber(heroData?.ambulances)}
                 </div>
                 <div className="text-sm text-[#718096]">{t('hero.stats.experience')}</div>
               </div>

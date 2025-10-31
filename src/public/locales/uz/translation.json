@@ -233,5 +233,11 @@
       "terms": "Foydalanish shartlari"
     }
   },
+  "statistics": {
+    "happy_patients": "mutaxassislar",
+    "wards": "zamonaviy xonalar",
+    "awards": "xalqaro sertifikatlar",
+    "ambulances": "aravachalarni soni"
+  },
   "operations": "operatsiyalar"
 }

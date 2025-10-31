@@ -234,10 +234,10 @@
     }
   },
   "statistics": {
-    "happy_patients": "Happy Patients",
-    "wards": "Wards",
-    "awards": "International Certifications",
-    "ambulances": "Successful Operations"
+    "happy_patients": "specialists",
+    "wards": "modern rooms", 
+    "awards": "international certificates",
+    "ambulances": "number of vehicles"
   },
   "operations": "operations"
 }

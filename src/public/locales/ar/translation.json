@@ -235,10 +235,10 @@
     }
   },
   "statistics": {
-    "happy_patients": "مرضى سعداء",
-    "wards": "أقسام المستشفى",
+    "happy_patients": "المتخصصون",
+    "wards": "غرف حديثة",
     "awards": "شهادات دولية",
-    "ambulances": "عمليات ناجحة"
+    "ambulances": "عدد المركبات"
   },
   "operations": "العمليات"
 }

@@ -3,11 +3,31 @@ import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { getAllFooterdata } from '../services/footerData/footerDataService'; // Adjust import path as needed
 import type { FooterTypes } from '../services/footerData/footerData.types'; // Adjust import path as needed
+
 export const Statistics: React.FC = () => {
   const { t } = useTranslation();
   const [footerData, setFooterData] = useState<FooterTypes | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // Function to format large numbers with K and M suffixes
+  const formatLargeNumber = (value: string | number | undefined): string => {
+    if (!value) return '0';
+    
+    const num = typeof value === 'string' ? parseFloat(value) : value;
+    
+    if (isNaN(num)) return '0';
+    
+    if (num >= 1000000) {
+      return (num / 1000000).toFixed(1).replace(/\.0$/, '') + 'M';
+    }
+    
+    if (num >= 1000) {
+      return (num / 1000).toFixed(1).replace(/\.0$/, '') + 'K';
+    }
+    
+    return num.toString();
+  };
 
   useEffect(() => {
     const fetchFooterData = async () => {
@@ -39,22 +59,22 @@ export const Statistics: React.FC = () => {
 
   const statsData = [
     {
-      number: footerData ? `${footerData.doctors}+` : "50+",
+      number: footerData ? `${formatLargeNumber(footerData.doctors)}+` : "50+",
       label: statistics.happy_patients || "Doctors",
       icon: "👨‍⚕️"
     },
     {
-      number: footerData ? `${footerData.experience}+` : "200+",
+      number: footerData ? `${formatLargeNumber(footerData.experience)}+` : "200+",
       label: statistics.wards || "Years of Experience",
       icon: "🏥"
     },
     {
-      number: footerData ? `${footerData.awards}+` : "25+",
+      number: footerData ? `${formatLargeNumber(footerData.awards)}+` : "25+",
       label: statistics.awards || "Awards",
       icon: "🏆"
     },
     {
-      number: footerData ? `${footerData.successfully_operations}+` : "15k+",
+      number: footerData ? `${formatLargeNumber(footerData.successfully_operations)}+` : "15k+",
       label: statistics.ambulances || "Successful Operations",
       icon: "🚑"
     }

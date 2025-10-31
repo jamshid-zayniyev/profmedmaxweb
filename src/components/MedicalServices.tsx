@@ -53,15 +53,14 @@ export function MedicalServices() {
 
                 </h2>
                 <ul className="text-white text-xs space-y-1">
-                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 20+ лет опыта</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 50+ квалифицированных врачей</li>
-                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 10+ наград</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 7+  {t('hero.stats.experience')}</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 57+ {t('hero.stats.doctors')}</li>
+                  <li className="flex items-center"><span className="w-2 h-2 bg-[#718096] rounded-full mr-2"></span> 80+ {t('hero.stats.awards')}</li>
                 </ul>
               </div>
             </div>
           </div>
 
-          {/* Right Side - Service Cards Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {services.map((service, index) => {
               const Icon = service.icon;

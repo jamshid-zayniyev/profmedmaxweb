@@ -234,10 +234,10 @@
     }
   },
   "statistics": {
-    "happy_patients": "快乐患者",
-    "wards": "医院病房",
-    "awards": "国际认证",
-    "ambulances": "成功手术"
+    "happy_patients": "专家",
+    "wards": "现代化房间",
+    "awards": "国际证书",
+    "ambulances": "车辆数量"
   },
   "operations": "營運"
 }
