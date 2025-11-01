@@ -146,15 +146,15 @@
     "patient": "Patient",
     "reviewsList": [
       {
-        "name": "Anna Petrova",
+        "name": "G'ulomov Baxtiyor",
         "text": "Excellent clinic with great staff! Doctors are very attentive and professional. Especially grateful to Dr. Ivanova for quality treatment."
       },
       {
-        "name": "Dmitry Sokolov",
+        "name": "Jabborov Sunnat",
         "text": "Modern equipment, cleanliness and comfort. Booked an appointment online, everything went quickly and without queues. I recommend!"
       },
       {
-        "name": "Elena Smirnova",
+        "name": "Azizova Malika",
         "text": "Very satisfied with the service! Doctors explain everything clearly and listen carefully. Prices are reasonable, quality is excellent."
       }
     ]

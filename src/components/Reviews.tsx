@@ -2,6 +2,11 @@ import { Card, CardContent } from './ui/card';
 import { Star, Quote } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
+import review1 from "../assets/images/review1.jpg"
+import review2 from "../assets/images/review2.jpg"
+import review3 from "../assets/images/review3.jpg"
+
+
 export function Reviews() {
   const { t } = useTranslation();
 
@@ -10,9 +15,9 @@ export function Reviews() {
     role: t('reviews.patient'),
     rating: 5,
     avatar: [
-      'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&h=100&fit=crop',
-      'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop'
+      review1,
+      review2,
+      review3
     ][index]
   }));
 

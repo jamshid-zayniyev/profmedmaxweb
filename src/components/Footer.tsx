@@ -226,11 +226,11 @@ export function Footer() {
           <div>
             <h3 className="font-bold mb-4 text-white/80">{t('footer.services.title')}</h3>
             <ul className="space-y-2 text-sm text-white/80">
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.cardiology')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.neurology')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.orthopedics')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.pediatrics')}</a></li>
-              <li><a href="#" className="hover:text-white transition-colors">{t('footer.services.therapy')}</a></li>
+              <li><a href="#category" className="hover:text-white transition-colors">{t('footer.services.cardiology')}</a></li>
+              <li><a href="#category" className="hover:text-white transition-colors">{t('footer.services.neurology')}</a></li>
+              <li><a href="#category" className="hover:text-white transition-colors">{t('footer.services.orthopedics')}</a></li>
+              <li><a href="#category" className="hover:text-white transition-colors">{t('footer.services.pediatrics')}</a></li>
+              <li><a href="#category" className="hover:text-white transition-colors">{t('footer.services.therapy')}</a></li>
             </ul>
           </div>
 

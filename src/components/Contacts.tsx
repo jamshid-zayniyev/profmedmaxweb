@@ -128,7 +128,7 @@ export function Contacts() {
   };
 
   // Generate Google Maps URL from coordinates
-  const getMapUrl = (latitude = 0, longitude = 0) => {
+  const getMapUrl = (latitude = 38.8472625, longitude = 65.784054) => {
     if (latitude !== undefined && longitude !== undefined) {
       return `https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d${latitude}!2d${longitude}!3d${latitude}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z${latitude}%2C${longitude}!5e0!3m2!1sen!2sru!4v1234567890123!5m2!1sen!2sru`;
     }
@@ -211,7 +211,7 @@ export function Contacts() {
                             >
                               {phone.number}
                             </a>
-                            {index < phones.length - 1 && <br />}
+                            {index < phones.length - 1 && ""}
                           </span>
                         ))}
                       </p>
@@ -295,24 +295,7 @@ export function Contacts() {
               </div>
             </div>
 
-            {/* Map */}
-            <div className="bg-gray-100 rounded-2xl overflow-hidden h-64">
-              {loading ? (
-                <div className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center">
-                  <span className="text-gray-400">Loading map...</span>
-                </div>
-              ) : (
-                <iframe
-                  src={getMapUrl()}
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  title={t("contacts.title")}
-                />
-              )}
-            </div>
+       
           </div>
 
           {/* Contact Form */}
@@ -386,6 +369,16 @@ export function Contacts() {
             </form>
           </div>
         </div>
+             {/* Map */}
+            <div className="bg-gray-100 rounded-2xl overflow-hidden  mt-4">
+              {loading ? (
+                <div className="w-full h-full bg-gray-200 animate-pulse flex items-center justify-center">
+                  <span className="text-gray-400">Loading map...</span>
+                </div>
+              ) : (
+               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1512.3245959616372!2d65.78405402538304!3d38.84726246406108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f4ea7e61551de9f%3A0xb19aeecec3ec703!2sProf%20Med%20Max!5e1!3m2!1sen!2s!4v1761975084960!5m2!1sen!2s" width="100%" height={300} loading="lazy"></iframe>
+              )}
+            </div>
       </div>
     </section>
   );

@@ -116,7 +116,7 @@ export function DepartmentCategory() {
   }
 
   return (
-    <section className="py-12 bg-gradient-to-b from-[#E6F0FA] to-[#D1E8FF]">
+    <section id='category' className="py-12 bg-gradient-to-b from-[#E6F0FA] to-[#D1E8FF]">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-[#2D1B69] mb-4">{t('departments.title')}</h2>
