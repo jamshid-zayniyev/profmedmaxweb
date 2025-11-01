@@ -24,7 +24,7 @@ export function About() {
             <img
               src = {about}
               alt={t('about.title')}
-              className="relative z-10 w-full h-auto rounded-2xl shadow-xl"
+              className="relative z-10 w-full h-auto max-h-[600px] rounded-2xl shadow-xl"
             />
           </div>
 

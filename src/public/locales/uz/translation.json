@@ -186,11 +186,11 @@
     },
     "form": {
       "name": "To'liq ism *",
-      "namePlaceholder": "Ivan Ivanov",
+      "namePlaceholder": "Ibrohim Yo'ldoshev",
       "email": "Email *",
-      "emailPlaceholder": "ivan@example.com",
+      "emailPlaceholder": "iba@example.com",
       "phone": "Telefon *",
-      "phonePlaceholder": "+7 (999) 123-45-67",
+      "phonePlaceholder": "+998 90 123-45-67",
       "message": "Xabar",
       "messagePlaceholder": "Simptomlaringiz yoki savollaringiz haqida gapiring...",
       "submit": "Ariza yuborish"

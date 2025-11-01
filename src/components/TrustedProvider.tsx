@@ -66,7 +66,7 @@ export function TrustedProvider() {
               <img
                 src="https://t4.ftcdn.net/jpg/01/53/86/11/360_F_153861155_D3fK58gPWgsMYd6HvzMJMPTOT8j480dB.jpg"
                 alt={t('trusted.title')}
-                className="w-full h-[600px] object-cover"
+                className="w-full h-full object-cover"
               />
             </div>
             

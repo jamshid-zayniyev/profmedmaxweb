@@ -76,7 +76,7 @@ export const Statistics: React.FC = () => {
     {
       number: footerData ? `${formatLargeNumber(footerData.successfully_operations)}+` : "15k+",
       label: statistics.ambulances || "Successful Operations",
-      icon: "🚑"
+      icon: "🦽🦼"
     }
   ];
 
