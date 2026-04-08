@@ -19,6 +19,7 @@ export function SearchBar() {
       <div className="container mx-auto px-4">
         <div className="bg-white rounded-xl p-6 shadow-2xl border border-gray-100">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+            {/* Specialty Select */}
             <Select value={specialty} onValueChange={setSpecialty}>
               <SelectTrigger className="bg-[#F8F9FA] border-gray-200 h-12">
                 <SelectValue placeholder="Выберите специальность" />
@@ -32,6 +33,7 @@ export function SearchBar() {
               </SelectContent>
             </Select>
 
+            {/* Doctor Select */}
             <Select value={doctor} onValueChange={setDoctor}>
               <SelectTrigger className="bg-[#F8F9FA] border-gray-200 h-12">
                 <SelectValue placeholder="Выберите врача" />
@@ -43,6 +45,7 @@ export function SearchBar() {
               </SelectContent>
             </Select>
 
+            {/* Date Select */}
             <Select value={date} onValueChange={setDate}>
               <SelectTrigger className="bg-[#F8F9FA] border-gray-200 h-12">
                 <SelectValue placeholder="Выберите дату" />
@@ -54,7 +57,8 @@ export function SearchBar() {
               </SelectContent>
             </Select>
 
-            <Button className="bg-[#5B4E99] hover:bg-[#3F2A7D] text-white h-12 font-semibold">
+            {/* Search Button */}
+            <Button className="bg-[#5B4E99] hover:bg-[#3F2A7D] text-white h-12 font-semibold flex items-center justify-center">
               <Search className="w-5 h-5 mr-2" />
               Найти
             </Button>

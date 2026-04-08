@@ -10,80 +10,33 @@ export function Benefits() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const benefits = [
-    {
-      icon: Clock,
-      title: 'Быстрая запись',
-      description: 'Онлайн-запись без звонков 24/7'
-    },
-    {
-      icon: Shield,
-      title: 'Гарантия качества',
-      description: 'Лицензированные специалисты с опытом'
-    },
-    {
-      icon: CreditCard,
-      title: 'Удобная оплата',
-      description: 'Наличные, карты, рассрочка'
-    },
-    {
-      icon: Headphones,
-      title: 'Поддержка 24/7',
-      description: 'Консультации и запись круглосуточно'
-    },
-    {
-      icon: FileCheck,
-      title: 'Полный пакет документов',
-      description: 'Все справки и заключения'
-    },
-    {
-      icon: Percent,
-      title: 'Программы лояльности',
-      description: 'Скидки постоянным пациентам'
-    }
+    { icon: Clock, title: 'Быстрая запись', description: 'Онлайн-запись без звонков 24/7' },
+    { icon: Shield, title: 'Гарантия качества', description: 'Лицензированные специалисты с опытом' },
+    { icon: CreditCard, title: 'Удобная оплата', description: 'Наличные, карты, рассрочка' },
+    { icon: Headphones, title: 'Поддержка 24/7', description: 'Консультации и запись круглосуточно' },
+    { icon: FileCheck, title: 'Полный пакет документов', description: 'Все справки и заключения' },
+    { icon: Percent, title: 'Программы лояльности', description: 'Скидки постоянным пациентам' }
   ];
 
   const promotions = [
-    {
-      title: 'Комплексный Check-up',
-      description: 'Полное обследование организма со скидкой 20%',
-      discount: '-20%',
-      originalPrice: '15 000 ₽',
-      price: '12 000 ₽',
-      validity: 'До 31 октября 2025'
-    },
-    {
-      title: 'Первичный прием педиатра',
-      description: 'Консультация детского врача + базовые анализы',
-      discount: '-15%',
-      originalPrice: '3 000 ₽',
-      price: '2 550 ₽',
-      validity: 'Постоянная акция'
-    },
-    {
-      title: 'Семейная программа',
-      description: 'Оформите карту для всей семьи и получите бонусы',
-      discount: '-10%',
-      originalPrice: null,
-      price: 'Скидка на все услуги',
-      validity: 'Бессрочно'
-    }
+    { title: 'Комплексный Check-up', description: 'Полное обследование организма со скидкой 20%', discount: '-20%', originalPrice: '15 000 ₽', price: '12 000 ₽', validity: 'До 31 октября 2025' },
+    { title: 'Первичный прием педиатра', description: 'Консультация детского врача + базовые анализы', discount: '-15%', originalPrice: '3 000 ₽', price: '2 550 ₽', validity: 'Постоянная акция' },
+    { title: 'Семейная программа', description: 'Оформите карту для всей семьи и получите бонусы', discount: '-10%', originalPrice: null, price: 'Скидка на все услуги', validity: 'Бессрочно' }
   ];
 
   const scrollToAppointment = () => {
     const element = document.getElementById('appointment');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
     <section className="py-20 gradient-bg-soft relative overflow-hidden" ref={ref}>
       {/* Decorative Elements */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#A8E6CF]/20 rounded-full blur-3xl"></div>
-      
+      <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#A8E6CF]/20 rounded-full blur-3xl pointer-events-none"></div>
+
       <div className="container mx-auto px-4 relative z-10">
-        {/* Benefits */}
-        <motion.div 
+        {/* Benefits Header */}
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -97,19 +50,20 @@ export function Benefits() {
           </p>
         </motion.div>
 
+        {/* Benefits Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-20">
-          {benefits.map((benefit, index) => {
+          {benefits.map((benefit) => {
             const Icon = benefit.icon;
             return (
               <motion.div
-                key={index}
+                key={benefit.title}
                 className="flex items-start space-x-4 glass p-6 rounded-2xl hover:shadow-2xl transition-all group"
                 initial={{ opacity: 0, y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
+                transition={{ duration: 0.6 }}
                 whileHover={{ y: -5, scale: 1.02 }}
               >
-                <motion.div 
+                <motion.div
                   className="w-12 h-12 bg-gradient-to-br from-[#FF9500] to-[#FF7A00] rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg"
                   whileHover={{ rotate: 10 }}
                 >
@@ -124,8 +78,8 @@ export function Benefits() {
           })}
         </div>
 
-        {/* Promotions */}
-        <motion.div 
+        {/* Promotions Header */}
+        <motion.div
           className="text-center mb-12"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -139,17 +93,18 @@ export function Benefits() {
           </p>
         </motion.div>
 
+        {/* Promotions Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {promotions.map((promo, index) => (
+          {promotions.map((promo) => (
             <motion.div
-              key={index}
+              key={promo.title}
               initial={{ opacity: 0, y: 30 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
+              transition={{ duration: 0.6 }}
               whileHover={{ y: -10, scale: 1.02 }}
             >
               <Card className="relative overflow-hidden hover:shadow-2xl transition-all border-0 glass h-full">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#FF9500] to-[#FF7A00] opacity-10 rounded-bl-full"></div>
+                <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-[#FF9500] to-[#FF7A00] opacity-10 rounded-bl-full pointer-events-none"></div>
                 <Badge className="absolute top-4 right-4 bg-gradient-to-r from-[#FF9500] to-[#FF7A00] text-white border-0 shadow-lg">
                   {promo.discount}
                 </Badge>
@@ -166,7 +121,8 @@ export function Benefits() {
                     <div className="text-sm text-[#5A6C7D] mt-1">Действует {promo.validity}</div>
                   </div>
                   <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                    <Button 
+                    <Button
+                      type="button"
                       onClick={scrollToAppointment}
                       className="w-full bg-gradient-to-r from-[#007BFF] to-[#0056b3] hover:from-[#0056b3] hover:to-[#004085] text-white shadow-lg min-h-[48px]"
                     >

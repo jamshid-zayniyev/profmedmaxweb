@@ -1,9 +1,11 @@
+// components/TrustedProvider.tsx
 import { CheckCircle2 } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 export function TrustedProvider() {
   const { t } = useTranslation();
 
+  // Xususiyatlar ro'yxati i18n orqali tarjima qilinadi
   const features = [
     t('trusted.features.expertTeam'),
     t('trusted.features.emergencyCare'),
@@ -19,11 +21,11 @@ export function TrustedProvider() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div>
-            <h2 className="text-[#2D3748] mb-6 leading-tight">
+            <h2 className="text-[#2D3748] mb-6 leading-tight text-3xl md:text-4xl font-bold">
               {t('trusted.title')}
             </h2>
             
-            <p className="text-[#718096] mb-8 leading-relaxed">
+            <p className="text-[#718096] mb-6 leading-relaxed">
               {t('trusted.description1')}
             </p>
             
@@ -45,15 +47,15 @@ export function TrustedProvider() {
 
             {/* Statistics */}
             <div className="grid grid-cols-3 gap-8">
-              <div>
+              <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">7+</div>
                 <div className="text-sm text-[#718096]">{t('trusted.stats.years')}</div>
               </div>
-              <div>
+              <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">17+</div>
                 <div className="text-sm text-[#718096]">{t('trusted.stats.specialists')}</div>
               </div>
-              <div>
+              <div className="text-center">
                 <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">10k+</div>
                 <div className="text-sm text-[#718096]">{t('trusted.stats.patients')}</div>
               </div>
@@ -70,7 +72,7 @@ export function TrustedProvider() {
               />
             </div>
             
-            {/* Decorative element */}
+            {/* Decorative elements */}
             <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-600 rounded-full opacity-10 blur-2xl"></div>
             <div className="absolute -top-4 -left-4 w-32 h-32 bg-purple-600 rounded-full opacity-10 blur-2xl"></div>
           </div>

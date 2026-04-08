@@ -5,11 +5,14 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from './ui/accordion';
-import { HelpCircle } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { motion, useInView } from 'motion/react';
 
+// Dynamic import for icons to improve performance
+const HelpCircle = dynamic(() => import('lucide-react').then(mod => mod.HelpCircle), { ssr: false });
+
 export function FAQ() {
-  const ref = useRef(null);
+  const ref = useRef<HTMLElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   const faqs = [
@@ -44,14 +47,19 @@ export function FAQ() {
   ];
 
   return (
-    <section className="py-20 gradient-bg-soft relative overflow-hidden" ref={ref}>
-      {/* Decorative Elements */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#007BFF]/10 rounded-full blur-3xl"></div>
+    <section 
+      id="faq" 
+      className="py-20 gradient-bg-soft relative overflow-hidden" 
+      ref={ref}
+      aria-labelledby="faq-title"
+    >
+      {/* Decorative Element */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#007BFF]/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-3xl mx-auto">
-          <motion.div 
-            className="text-center mb-12"
+        <div className="max-w-3xl mx-auto text-center">
+          <motion.header 
+            className="mb-12"
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6 }}
@@ -59,16 +67,16 @@ export function FAQ() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-[#A8E6CF] to-[#007BFF] rounded-2xl mb-4 shadow-lg">
               <HelpCircle className="w-8 h-8 text-white" aria-hidden="true" />
             </div>
-            <h2 className="mb-4">Часто задаваемые вопросы</h2>
-            <p>
-              <span className="accent-text text-xl block text-[#007BFF]">
+            <h2 id="faq-title" className="text-2xl font-bold mb-2">Часто задаваемые вопросы</h2>
+            <p className="text-[#5A6C7D]">
+              <span className="accent-text text-xl block text-[#007BFF] mb-2">
                 "Мы здесь, чтобы помочь вам"
               </span>
               Ответы на популярные вопросы о работе клиники и наших услугах
             </p>
-          </motion.div>
+          </motion.header>
 
-          <Accordion type="single" collapsible className="space-y-4">
+          <Accordion type="single" collapsible className="space-y-4" role="list">
             {faqs.map((faq, index) => (
               <motion.div
                 key={index}
@@ -79,6 +87,7 @@ export function FAQ() {
                 <AccordionItem 
                   value={`item-${index}`}
                   className="glass rounded-2xl px-6 border-0 shadow-sm hover:shadow-lg transition-all"
+                  role="listitem"
                 >
                   <AccordionTrigger className="text-left text-[#2C3E50] hover:text-[#007BFF] hover:no-underline py-6">
                     <span className="font-semibold">{faq.question}</span>

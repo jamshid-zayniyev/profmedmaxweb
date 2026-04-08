@@ -1,8 +1,8 @@
 // components/Statistics.tsx
 import React, { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { getAllFooterdata } from '../services/footerData/footerDataService'; // Adjust import path as needed
-import type { FooterTypes } from '../services/footerData/footerData.types'; // Adjust import path as needed
+import { getAllFooterdata } from '../services/footerData/footerDataService'; // Importni kerakli joyga moslang
+import type { FooterTypes } from '../services/footerData/footerData.types'; // Importni kerakli joyga moslang
 
 export const Statistics: React.FC = () => {
   const { t } = useTranslation();
@@ -10,7 +10,7 @@ export const Statistics: React.FC = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-  // Function to format large numbers with K and M suffixes
+  // Katta raqamlarni formatlash (K va M bilan)
   const formatLargeNumber = (value: string | number | undefined): string => {
     if (!value) return '0';
     
@@ -34,7 +34,6 @@ export const Statistics: React.FC = () => {
       try {
         setLoading(true);
         const data = await getAllFooterdata();
-        // Assuming the API returns an array, take the first item
         if (data && data.length > 0) {
           setFooterData(data[0]);
         }
@@ -49,7 +48,7 @@ export const Statistics: React.FC = () => {
     fetchFooterData();
   }, []);
 
-  // Use translation as fallback, but prefer API data
+  // API ma’lumotlari bo‘lmasa fallback sifatida i18n dan foydalanamiz
   const statistics = t('statistics', { returnObjects: true }) as {
     happy_patients: string;
     wards: string;
@@ -80,7 +79,7 @@ export const Statistics: React.FC = () => {
     }
   ];
 
-  // Show loading state
+  // Loading holati
   if (loading) {
     return (
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -102,7 +101,7 @@ export const Statistics: React.FC = () => {
     );
   }
 
-  // Show error state (but still show the data with fallback values)
+  // Error holati (fallback bilan)
   if (error && !footerData) {
     return (
       <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
@@ -129,6 +128,7 @@ export const Statistics: React.FC = () => {
     );
   }
 
+  // Asosiy render
   return (
     <section className="py-16 bg-gradient-to-r from-blue-50 to-indigo-50">
       <div className="container mx-auto px-4">
